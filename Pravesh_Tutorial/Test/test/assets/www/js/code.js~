@@ -1,0 +1,36 @@
+function changeContent(selector, text){
+  $(selector).html(text);
+}
+
+function getItem(){
+		var dataObj = {
+		id : 29,
+		city : "Johannesburg"
+		};
+	utils_doAjax("query", dataObj, processQuery);
+	}
+}
+
+function processQuery(data){
+	$("#stuff").html(data.content);	
+	}
+
+function utils_doAjax(func, parameters, processData) {
+	/* change made here */
+	$.ajax({
+		type : 'GET',
+		url : "127.0.0.1/" + func + ".php",
+		data : parameters,
+		dataType : 'jsonp',
+		error : function(r, e) {
+			alert('error'+r+e+func);
+			utils_r=r;
+			utils_e=e;
+		},
+		success : function(data) {
+			//alert("success");
+			processData(data);
+		}
+	});
+
+}
