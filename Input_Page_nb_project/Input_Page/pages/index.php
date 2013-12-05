@@ -13,7 +13,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,6 +29,6 @@
 		</div>
 
 		<!-- JavaScript -->
-		<script type="text/javascript" src ="../js/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+                <script type="text/javascript" src ="../bootstrap/js/jquery.min.js"></script>
+                <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 	</body>
