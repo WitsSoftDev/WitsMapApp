@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2013 at 09:09 AM
+-- Generation Time: Dec 07, 2013 at 08:24 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `locationdata` (
   `GPSLongitude` double NOT NULL,
   `LocationInfo` mediumtext,
   `ImageOfLocation` mediumtext,
-  `LocationName` char(255) DEFAULT NULL,
+  `LocationName` char(100) DEFAULT NULL,
   `LocationPrefix` char(10) DEFAULT NULL,
   PRIMARY KEY (`LocationID`),
   KEY `LocationID` (`LocationID`),
@@ -111,13 +111,21 @@ CREATE TABLE IF NOT EXISTS `path` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `UserID` int(10) NOT NULL AUTO_INCREMENT,
-  `UserName` varchar(100) NOT NULL,
-  `UserPassword` varchar(100) NOT NULL,
-  `UserEmailAddress` varchar(100) NOT NULL,
+  `UserName` varchar(30) NOT NULL,
+  `UserPassword` varchar(32) NOT NULL,
+  `UserEmailAddress` varchar(30) NOT NULL,
   PRIMARY KEY (`UserID`),
   UNIQUE KEY `UserName` (`UserName`),
   UNIQUE KEY `UserEmailAddress` (`UserEmailAddress`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`UserID`, `UserName`, `UserPassword`, `UserEmailAddress`) VALUES
+(1, 'ick_seshoka', '32250170a0dca92d53ec9624f336ca24', 'ick.seshoka@gmail.com'),
+(2, 'jason', '73a054cc528f91ca1bbdda3589b6a22d', 'jasonchalom@yahoo.co.uk');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
