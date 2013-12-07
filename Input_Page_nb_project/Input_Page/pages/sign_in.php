@@ -1,5 +1,5 @@
 <?php
-
+    require '../functions/db_connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -40,18 +40,20 @@
             <div id="content-holder">
                 <div id="form-holder">
                 <h3>Sign In</h3>
-                <form method="post" >
+                
+                <form action="" method="post">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-envelope"></i></span>
-                        <input id="" class="input-xlarge" type="email" placeholder="Email Address" required="true"/>
+                        <input id="" class="input-xlarge" type="email" placeholder="Email Address"/>
                     </div><br />
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-barcode"></i></span>
-                        <input id="" class="input-xlarge" type="password" placeholder="Password" required="true" />
+                        <input id="" class="input-xlarge" type="password" placeholder="Password" />
                     </div><br/>
                     <label class="checkbox"><input type="checkbox" /><p class="muted">Remember me</p></label>
                     <input class="btn btn-info" type="submit" value="Sign in" /> <a href="#">forgot password?</a>
                 </form>
+                
                 </div>
                 <div id="sign-in-error-container">
                          

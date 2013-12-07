@@ -18,8 +18,6 @@ if(!$connection){
      *if the connection was unsuccessful display an error and kill the script
      */
     die("<h4>Unable to connect to the db</h4>");
-}else{
-    echo "<h4>Connected</h4>";
 }
 
 ?>
