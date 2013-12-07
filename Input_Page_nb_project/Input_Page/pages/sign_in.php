@@ -105,7 +105,7 @@
                         if($display_error_messag){
                            echo '<div class="alert alert-danger">
                                 <a class="close" data-dismiss="alert">×</a>
-                                <strong>Sign in Error!</strong> Inccorect Email and Password combination.
+                                <strong>Sign in Error!</strong> Incorrect Email and Password combination.
                             </div> ';
                            }
                          ?>
