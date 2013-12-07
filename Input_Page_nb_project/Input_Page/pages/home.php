@@ -30,13 +30,25 @@
                             <div class="container"> 
                                 <?php
                                     include '../functions/db_connect.php';
-                                    echo '<p class="navbar-text pull-right"><i class="icon-user icon-white"></i>'.' '.getLoggedInUserName($connection).' </p>';
+                                    $connection_link = $connection;
+                                    echo '<div class="btn-group pull-right">
+                                            <a class="btn dropdown-toggle btn-info btn-small" data-toggle="dropdown">
+                                                <i class="icon-user icon-white"></i>
+                                                <b>'.getLoggedInUserName($connection_link).'</b>
+                                                <span class="caret"></span>
+                                            </a>
+                                                
+                                                <ul class="dropdown-menu">
+                                                <!-- dropdown menu links -->
+                                                    <li>
+                                                        <a href="../functions/user_signout.php">
+                                                            <i class="icon-minus-sign"></i>
+                                                                <b>Sign Out</b>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                           </div>';
                                  ?>
-                                <ul class="nav pull-right">
-                                    <li class="active">
-                                        <a href="../functions/user_signout.php">Sign out</a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>

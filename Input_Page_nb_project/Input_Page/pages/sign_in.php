@@ -64,9 +64,10 @@
             <div class="navbar navbar-fixed-top navbar-inverse">
                 <div class="navbar-inner">
                     <div class="container">
-                        <p id="sign-in-status" class="navbar-text pull-right"><i class="icon-user icon-white"></i><b> Sign in</b></p>
-                        
-
+                        <button class="btn btn-info btn-small pull-right" disabled="true">
+                            <i class="icon-user icon-white"></i>
+                            <b>Your not <u>Signed in</u></b>
+                        </button>
                     </div>
                 </div>
             </div>
