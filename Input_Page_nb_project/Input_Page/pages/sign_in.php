@@ -51,6 +51,8 @@
             <!-- Stylesheets -->
             <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
             <link rel="stylesheet" type="text/css" href="../style/sign_in_style.css"/>
+            <link rel="stylesheet" type="text/css" href="../style/general_style.css"/>
+
 
             <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!--[if lt IE 9]>
@@ -60,20 +62,22 @@
     </head>
     
     <body>
-        
+        <!-- Navigation bar -->
             <div class="navbar navbar-fixed-top navbar-inverse">
                 <div class="navbar-inner">
                     <div class="container">
                         <button class="btn btn-info btn-small pull-right" disabled="true">
                             <i class="icon-user icon-white"></i>
-                            <b>Your not <u>Signed in</u></b>
+                            Your not <b><u>Signed in</u></b>
                         </button>
                     </div>
                 </div>
             </div>
         
+        <!-- body container -->
         <div class="container">
             <div id="content-holder">
+                <!-- Sign in form -->
                 <div id="form-holder">
                 <h3>Sign In</h3>
                 
@@ -96,20 +100,21 @@
                     </div>
                 </form>
                 
+                <!-- Sign in error container -->
                 </div>
                 <div id="sign-in-error-container">
                     <div class="row">
                         <div class="span4"></div>
                             <div class="span4">
-                        <?php
-                        if($display_error_messag){
-                           echo '<div class="alert alert-danger">
-                                <a class="close" data-dismiss="alert">×</a>
-                                <strong>Sign in Error!</strong> Incorrect Email and Password combination.
-                            </div> ';
-                           }
-                         ?>
-                         </div>
+                                <?php
+                                if($display_error_messag){
+                                   echo '<div class="alert alert-danger">
+                                        <a class="close" data-dismiss="alert">×</a>
+                                        <strong>Sign in Error!</strong> Incorrect Email and Password combination.
+                                    </div> ';
+                                   }
+                                 ?>
+                            </div>
                     </div>
                 </div>
             </div>

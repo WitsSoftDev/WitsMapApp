@@ -16,6 +16,8 @@
                 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
                 <!-- Custome stylesheet -->
                 <link rel="stylesheet" type="text/css" href="../style/home_style.css">
+                <link rel="stylesheet" type="text/css" href="../style/general_style.css"/>
+
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +28,7 @@
 
 	</head>
         <body>
-       
+       <!-- Navigation bar -->
             <div class="navbar navbar-fixed-top navbar-inverse">
                 <div class="navbar-inner">
                     <div class="container"> 
@@ -34,7 +36,7 @@
                             include '../functions/db_connect.php';
                             $connection_link = $connection;
                             echo '<div class="btn-group pull-right">
-                                    <a class="btn btn-info btn-small" data-toggle="dropdown">
+                                    <a class="btn btn-info btn-small">
                                         <i class="icon-user icon-white"></i>
                                         <b>'.getLoggedInUserName($connection_link).'</b>
                                     </a>
@@ -56,6 +58,12 @@
                     </div>
                 </div>
             </div>
+       
+       <!-- Body content container -->
+       <div class="container">
+           
+           
+       </div>
 
 
         <!-- JavaScript -->

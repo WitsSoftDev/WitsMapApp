@@ -10,6 +10,7 @@ div#content-holder {
     border-radius: 5px;
 }
 
+
 div#form-holder {
     padding: 2% 0 0 34%;
 }
@@ -28,3 +29,4 @@ div#sign-in-error-container {
 div#submit-container {
     margin-left: 12%;
 }
+

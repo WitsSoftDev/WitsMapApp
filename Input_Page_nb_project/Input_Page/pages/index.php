@@ -3,8 +3,9 @@
     require '../functions/user_functions.php';
     
     /*
-     * Check if a session $_SESSION['userID'] exists and do appropriate page redirecting.
+     * Checks if a session $_SESSION['userID'] exists and do appropriate page redirecting.
      */
+    
     if(userIsLoggedIn()){
         include './home.php';
     }else{
