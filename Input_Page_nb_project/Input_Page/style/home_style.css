@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08 Dec 2013, 9:32:00 AM
+    Author     : ick
+*/
+
+/*
+    This is the stylesheet for the home page
+        -also includes custom bootstrap.
+*/
+
+ul.dropdown-menu {
+    min-width: 0;
+    padding: 0;
+}
+
+.btn-group > .dropdown-menu {
+    font-size: 13px;
+}
+
+.dropdown-menu > li > a:hover {
+    color: rgba(0, 0, 0,0.5);
+    background-color: rgba(0, 129, 194,0);
+    background-image: none;
+}
+

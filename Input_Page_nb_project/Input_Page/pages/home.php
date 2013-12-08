@@ -14,6 +14,8 @@
 
 		<!-- Stylesheets -->
                 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+                <!-- Custome stylesheet -->
+                <link rel="stylesheet" type="text/css" href="../style/home_style.css">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,39 +25,39 @@
 	    <![endif]-->
 
 	</head>
-	<body>
-		
-                    <div class="navbar navbar-fixed-top navbar-inverse">
-                        <div class="navbar-inner">
-                            <div class="container"> 
-                                <?php
-                                    include '../functions/db_connect.php';
-                                    $connection_link = $connection;
-                                    echo '<div class="btn-group pull-right">
-                                            <a class="btn dropdown-toggle btn-info btn-small" data-toggle="dropdown">
-                                                <i class="icon-user icon-white"></i>
-                                                <b>'.getLoggedInUserName($connection_link).'</b>
-                                                <span class="caret"></span>
-                                            </a>
-                                                
-                                                <ul class="dropdown-menu">
-                                                <!-- dropdown menu links -->
-                                                    <li>
-                                                        <a href="../functions/user_signout.php">
-                                                            <i class="icon-minus-sign"></i>
-                                                                <b>Sign Out</b>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                           </div>';
-                                 ?>
-                            </div>
-                        </div>
-                    </div>
-		
+        <body>
+       
+            <div class="navbar navbar-fixed-top navbar-inverse">
+                <div class="navbar-inner">
+                    <div class="container"> 
+                        <?php
+                            include '../functions/db_connect.php';
+                            $connection_link = $connection;
+                            echo '<div class="btn-group pull-right">
+                                    <a class="btn dropdown-toggle btn-info btn-small" data-toggle="dropdown">
+                                        <i class="icon-user icon-white"></i>
+                                        <b>'.getLoggedInUserName($connection_link).'</b>
+                                        <span class="caret"></span>
+                                    </a>
 
-		<!-- JavaScript -->
-                <script type="text/javascript" src ="../bootstrap/js/jquery.min.js"></script>
-                <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+                                        <ul class="dropdown-menu">
+                                        <!-- dropdown menu links -->
+                                            <li>
+                                                <a href="../functions/user_signout.php">
+                                                    <i class="icon-minus-sign"></i>
+                                                        Sign Out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                   </div>';
+                         ?>
+                    </div>
+                </div>
+            </div>
+
+
+        <!-- JavaScript -->
+        <script type="text/javascript" src ="../bootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>
