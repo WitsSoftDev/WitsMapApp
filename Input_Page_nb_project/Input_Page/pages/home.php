@@ -34,11 +34,13 @@
                             include '../functions/db_connect.php';
                             $connection_link = $connection;
                             echo '<div class="btn-group pull-right">
-                                    <a class="btn dropdown-toggle btn-info btn-small" data-toggle="dropdown">
+                                    <a class="btn btn-info btn-small" data-toggle="dropdown">
                                         <i class="icon-user icon-white"></i>
                                         <b>'.getLoggedInUserName($connection_link).'</b>
-                                        <span class="caret"></span>
                                     </a>
+                                     <a class="btn dropdown-toggle btn-small btn-info" data-toggle="dropdown" href="#">
+                                        <span class="caret"></span>
+                                     </a>
 
                                         <ul class="dropdown-menu">
                                         <!-- dropdown menu links -->
