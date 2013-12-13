@@ -104,17 +104,16 @@
                 </div>
                 <div id="sign-in-error-container">
                     <div class="row">
-                        <div class="span4"></div>
-                            <div class="span4">
-                                <?php
-                                if($display_error_messag){
-                                   echo '<div class="alert alert-danger">
-                                        <a class="close" data-dismiss="alert">×</a>
-                                        <strong>Sign in Error!</strong> Incorrect Email and Password combination.
-                                    </div> ';
-                                   }
-                                 ?>
-                            </div>
+                        <div class="span4 offset4">
+                            <?php
+                            if($display_error_messag){
+                               echo '<div class="alert alert-danger">
+                                    <a class="close" data-dismiss="alert">×</a>
+                                    <strong>Sign in Error!</strong> Incorrect Email and Password combination.
+                                </div> ';
+                               }
+                             ?>
+                        </div>
                     </div>
                 </div>
             </div>
