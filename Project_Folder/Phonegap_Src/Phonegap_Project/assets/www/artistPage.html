@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>PhoneGap</title>
+<script type="text/javascript" charset="utf-8" src="js/cordova-2.3.0.js"></script>
+<!-- <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script> -->
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1 , maximum-scale=1,user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.css" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.structure.css" />
+<link rel="stylesheet" href="css/gigGuideSATheme.css" />
+<link rel="stylesheet" href="css/my.css" />
+
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery.mobile-1.2.1.js"></script>
+<script src="js/constants.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/index.js"></script>
+<script src="js/artist.js"></script>
+<script src="js/media-player.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="artistPage">
+		<div id="headerPanel" data-theme="a" data-role="header"
+			style="margin: 0px; padding: 0px" data-id="myHeader"
+			data-position="fixed" data-tap-toggle="false"
+			style="border-collapse: collapse;">
+		
+		<div data-role="popup" id="artistPopupBasic" data-theme="a"
+				class="ui-content" style="top: 0px; margin:0px; padding:5px">
+				<a href="#" data-rel="back" data-role="button" data-theme="c"
+					data-icon="close-icon" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<div id="artistPopupReplace" class="ui-content popupContents"><table id="popupTableDiv"></table></div>
+			</div>
+			
+			<img class="mainIconSubMenu" src="images/mainIconBack.png" onClick="javascript:utils_changePage('index')"> Gig Box
+			<div class="menuBar">
+				<table class="menuTable">
+					<tr>
+						<!-- <td class="menuButton"><a href="index.html"> <span class="centerMenuButton"><img
+								class="headerButton" src="images/today.png"></span>
+						</a></td> -->
+						<td id="artistScheduleIcon" class="menuButton menuSelect" onClick="javascript:artist_showDiv('Schedule')"><img
+							class="menuIcons" src="images/today.png"
+							></td>
+						<td id="artistInfoIcon" class="menuButton" onClick="javascript:artist_showDiv('Info')"><img
+							class="menuIcons" src="images/about.png"
+							></td>
+						<td id="artistTracksIcon"  class="menuButton" onClick="javascript:artist_showDiv('Tracks')"><img class="menuIcons"
+							src="images/play.png"
+							></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="adDiv">
+
+				<table id='artistTable' class="fixedEntityHeaderTable">
+					<tr>
+						<td class="entityImageCell" rowspan="2"><img id="entityImage"
+							src="images/default.jpg"></td>
+						<td align="center">
+							<div class="entityName" id="entityName"></div>
+							<div class="entityDetails" id="entityDetails"></div>
+							<div id="favDiv"></div>
+						</td>
+					</tr>
+					<tr>
+						<caption class="tableCaption">
+							<h4>
+								<div id="caption"></div>
+							</h4>
+						</caption>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('#artistPage').load('pageshow', function() {
+				// Do this once, first page load.
+				//var divat = document
+				//	.getElementById('artistTable').offsetHeight;
+				//var divhp = document
+				//.getElementById('headerPanel').offsetHeight;
+				//alert(divat+divhp);
+				//	document
+				//		.getElementById("artistScheduleDiv").style.top = (divat + 50)
+				//	+ "px";
+				artist_getStream();
+				artist_showDiv("Schedule");
+				var id = artist_getId();
+				//alert(id);
+				artist_getAllContent(id);
+				utils_locationEntity = null;
+				utils_locationId=-1;
+				//artist_buildAudioPage(id);
+				// document.getElementById("scheduleStreamDiv").style.top=(90+divh)+"px";
+				//artist_setButtons();
+
+			});
+		</script>
+
+
+
+		<div id="artistContentDiv" data-role="content"
+			style="border-collapse: collapse; margin: 0px; padding: 0px">
+
+			<!-- Artist Schedule -->
+			<div id="artistContent" class="artistContent" style="">
+
+			<!-- 	<script>
+					// Bind the swipeleftHandler callback function to the swipe event on div.box
+					$('#artistPage').bind('swipeleft', function(e) {
+						artist_swipe(-1);
+						// GO TO INFO 
+						e.stopImmediatePropagation();
+						return false;
+					});
+
+					$('#artistPage').bind('swiperight', function(e) {
+						artist_swipe(1);
+						// GO TO SCHEDULE 
+						e.stopImmediatePropagation();
+						return false;
+					});
+				</script> -->
+
+				<div id="artistScheduleDiv" class="artistScheduleDiv " style="margin-top: 0px; padding-top: 0px; margin-left: 0px; padding-left: 0px">
+
+
+				
+				<table id="artistStreamTable" class="streamTable"
+					style="width: 100%; display: table; border-collapse: collapse">
+
+			
+				</table>
+				</div>
+
+
+
+				<!-- Artist Info -->
+				<div id="artistInfoDiv" class="artistInfoDiv">
+				
+				</div>
+
+
+
+
+				<!-- Artist Tracks -->
+				<div id="artistTracksDiv">
+					
+					
+						
+						<!-- 
+						<div id="theGruf" class="descriptionTag">Still Gruff</div>
+						<table>
+							<tr>
+								<td id=playerView width="100%"><marquee id="trackName"
+										behavior="none" direction="right" style="color: white">Still
+										Gruff after all these years</marquee></td>
+								<td id="play_btn" class="menuButton"><a
+									href="javascript:playAudio('http://197.85.191.92/gigguide/web/upload/track/17-track2.mp3')">
+										<img class="headerButton" src="images/mediaPlay.png">
+								</a></td>
+								<td style="display: none" id="pause_btn" class="menuButton"><a
+									href="javascript:pauseAudio('http://197.85.191.92/gigguide/web/upload/track/17-track1.mp3')">
+										<img class="headerButton" src="images/mediaPause.png">
+								</a></td>
+
+								<td class="menuButton"><a
+									href="javascript:stopAudio('http://197.85.191.92/gigguide/web/upload/track/17-track1.mp3')">
+										<img class="headerButton" src="images/mediaStop.png">
+								</a></td>
+							</tr>
+						</table>
+					</div> -->
+			
+
+
+
+
+			</div>
+		</div>
+		</div>
+</body>
+</html>

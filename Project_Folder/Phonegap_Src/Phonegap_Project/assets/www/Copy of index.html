@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>PhoneGap</title>
+<script type="text/javascript" charset="utf-8" src="js/cordova-2.3.0.js"></script>
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1 , maximum-scale=1,user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<link rel="stylesheet" href="css/jquery.mobile.custom.css" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.structure.css" />
+<link rel="stylesheet" href="css/jquery.mobile.theme-1.2.1.css" />
+<link rel="stylesheet" href="css/my.css" />
+
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+<script src="js/constants.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/index.js"></script>
+<script src="js/artist.js"></script>
+<script src="js/venue.js"></script>
+<script src="js/geo-service.js"></script>
+<script src="js/media-player.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/search.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script> 
+<script>
+	$(document).bind("mobileinit", function() {
+		$.mobile.defaultPageTransition = 'none';
+		$.mobile.useFastClick = true;
+	});
+</script>
+
+<style>
+* {
+-webkit-touch-callout: none;
+
+}
+</style>
+
+<script src="js/jquery.mobile-1.2.1.js"></script>
+ 
+<script type="text/javascript" charset="utf-8">
+	// Wait for Cordova to load
+	function onLoad() {
+		
+		index_login();
+		  if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    } else {
+        browserLoad();
+    }
+	}
+
+	// Cordova is loaded and it is now safe to make calls Cordova methods
+	//
+
+	// Cordova is ready
+	function browserLoad(){
+		index_getRandomEntity();
+		index_getStream();
+		//get_geoPosition();
+		//utils_getCity();
+		//utils_getLocation();
+		utils_getHTMLLocation();
+		index_retrieveState();
+		//index_addItems();
+		index_startCarousel();
+
+	}
+	
+	function onDeviceReady() { // To be moved - reconsider where this should be perhaps not on Cordova load!
+		document.addEventListener("backbutton", utils_onBackKeyDown, false);
+			
+		navigator.splashscreen.hide();
+		//alert('performing network check');
+		utils_checkConnection();
+		index_retrieveState();
+		//alert("about to check settings");
+		
+		//var email = window.localStorage.getItem("email");
+		//if (email != null){
+		//	var psd = window.localStorage.getItem("psd");
+		//	alert(email + " " + psd);
+		//	settings_loginFromExisting(email, psd);
+		//};
+		var devicePlatform = device.platform;
+		//utils_getFollowed(deviceID) - GET FOLLOWED BANDS AND VENUES?????;
+		/*
+		The uuid for iOS is not unique for a device, but is unique per application per install. This will change if you delete the app and 
+		re-install, and possibly also when you upgrade your iOS version, or even upgrade your app per version (as we've seen in iOS 5.1). Not a reliable value. */
+		//alert(devicePlatform);
+		$("#searchPopupBasic").popup({
+		overlayTheme : "a"
+		});
+
+		index_getRandomEntity();
+		index_getStream();
+		//get_geoPosition();
+		//utils_getCity();
+		utils_getHTMLLocation();
+		//index_addItems();
+		index_startCarousel();
+
+		//utils_getLocation();
+		utils_touchEvents('.menuButton');
+		utils_touchEvents('.streamMenu');
+		//checking last state of view
+		
+	};
+</script>
+
+
+
+
+</head>
+
+
+<body onload="onLoad()" id="mainBody">
+
+	<div data-role="page" id="homePage">
+		<div id="headerPanel" data-theme="a" data-role="header"
+			data-id="myHeader" data-position="fixed" data-tap-toggle="false">
+
+			<div data-role="popup" id="popupBasic" data-theme="a" 
+				class="ui-content" style="top: 0px; margin:0px; padding:5px;">
+				<a href="#" data-rel="back" data-role="button" data-theme="c"
+					data-icon="close-icon" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<div id="popupReplace" class="ui-content popupContents"><table id="popupTableDiv"></table></div>			
+			</div>
+			
+			
+			<div data-role="popup" id="searchPopupBasic" data-theme="a"
+				class="ui-content" style="top: 0px; margin:0px; padding:5px">
+				<a href="#" data-rel="back" data-role="button" data-theme="c"
+					data-icon="close-icon" data-iconpos="notext" class="ui-btn-right">Close</a>
+				
+				
+				<table class='menuGig' width=100% style='border-collapse:collapse'>
+				<tr class='' width=100% >
+				<td class='gigInfoHeading' style='padding-left:5px; padding-right:0px'> Search Artist/Venue </td>
+				</tr></table>
+				
+				<div id="searchPopupReplace" class="ui-content popupContents">
+				
+				<ul id='entitySearch' data-role='listview' data-inset='true' data-filter='true' data-theme="a" data-filter-theme='none' data-filter-placeholder='Find Artist / Venue..' data-filter-icon="none"></ul>
+				<!-- 
+				<ul class='filterBox' data-icon='close-icon' style='list-style:none' id='entitySearch' data-role='listview' data-inset='true' data-filter='true' data-filter-theme='none' data-icon='false' data-theme="none" data-filter-placeholder='Find Artist / Venue..'>
+					
+				</ul> 
+				-->
+				<!--  <p>
+				<input type="text" id="searchField" placeholder="Search">
+				<ul id="suggestions" data-role="listview" data-inset="true"></ul>
+				</p>
+				-->
+				
+				
+				</div>
+			</div>
+			
+			<!-- <div data-role="popup" id="settingsPopupBasic" data-theme="a"
+				class="ui-content" style="top: 0px; margin:0px; padding:5px">
+				<a href="#" data-rel="back" data-role="button" data-theme="c"
+					data-icon="close-icon" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<div id="settingsPopupReplace" class="ui-content popupContents"><table id="popupTableDiv"></table></div>
+		</div> -->
+			
+			<div id="mainScreenLogo" style="display:inline-block">
+			<img class="mainIcon" src="images/gigGuideIcon.png"> Gig Box
+			</div>
+			<div id="homeScreenMenu" class="menuBar">
+			
+				<table class="menuTable">
+					<tr>
+										
+					 <td class="menuButton" onClick="javascript:search_doPopup()">							
+						<img class="menuIcons"	src="images/searchIcon.png">
+						</td>
+						<td class="menuButton " onClick="javascript:utils_changePage('settingsPage')">
+						<img class="menuIcons " src="images/settingsIcon.png"></td> 
+					</tr>
+				</table> 
+				<!-- <ul id='entitySearch' data-role='listview' data-inset='false' data-filter='true' data-theme="c" data-divider-theme="a" data-filter-placeholder='Find Artist / Venue..'></ul>
+				-->
+			</div>
+
+		</div>
+
+		<div id="indexContent" data-role="content"
+			style="margin-top: 0px; padding-top: 0px; margin-left: 0px; padding-left: 0px">
+			<script type="text/javascript">
+				$('#homePage').bind('pagecreate', function() {
+				
+					// Do this once, first page load.
+					index_fixHeight();
+					
+				});
+			</script>
+			
+		
+			
+			
+			<div id="adDiv" class="adDiv">
+
+				<table id="adTable" class="fixedEntityHeaderTable">
+					<tr>
+						<td><div id="adImg" style="width:100%; height:500px">
+
+</div>
+							<div id="nameOverlay">Default</div> <img id="leftOverlay"
+							src="images/leftArrow.png" /> <img id="rightOverlay"
+							src="images/rightArrow.png" /></td>
+					</tr>
+					
+				</table>			
+		
+				<table width=100% class="streamSelectTable" style="border-bottom:1px solid yellow">
+					<tr style="width:100%">
+								
+					    <td style="width:50%;border-top-right-radius: 15px;color:#7f7f7f ;line-height:50px; text-align: center;" id="toggleStreamFollow" class="streamMenu" onClick="javascript:index_show('streamDiv')">							
+						<div style="display:inline-block;line-height:50px;vertical-align:middle; text-align: center"> <img id="followImg" class="barIcons"	src="images/followDeselect.png"> Followed </div>
+						</td>
+						<td style="width:50%;border-top-left-radius: 15px;color:white;line-height:50px; text-align: center; " id="toggleStreamGps" class="streamMenu streamTab" onClick="javascript:index_show('locationStreamDiv')">							
+						<div style="display:inline-block;line-height:50px;  vertical-align:middle; text-align: center"><img id="gpsImg" class="barIconsG"	src="images/gpsSelect.png">  Nearby </div>
+						</td>
+					</tr>
+				</table> 
+				<!-- <ul id='entitySearch' data-role='listview' data-inset='false' data-filter='true' data-theme="c" data-divider-theme="a" data-filter-placeholder='Find Artist / Venue..'></ul>
+				-->
+			
+
+			
+			</div>
+
+
+				<div id="streamDiv" class="streamDiv"
+					style="margin-top: 0px; padding-top: 0px; margin-left: 0px; padding-left: 0px">				
+					<table id="streamTable" class="streamTable"
+						style="width: 100%; display: table; border-collapse: collapse;">
+					</table>
+				</div>
+			
+				<div id="locationStreamDiv" class="streamDiv"
+					style="margin-top: 0px; padding-top: 0px; margin-left: 0px; padding-left: 0px">
+					<table id="locationStreamTable" class="streamTable"
+						style="width: 100%; display: table; border-collapse: collapse;">
+					</table>
+				</div>
+		</div>
+	</div>
+
+</body>
+</html>
