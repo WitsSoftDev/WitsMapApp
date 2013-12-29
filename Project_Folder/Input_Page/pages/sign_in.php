@@ -19,6 +19,7 @@
             $query = sprintf("SELECT userID FROM users WHERE userEmailAddress='%s' AND userPassword='%s'",
                             mysql_real_escape_string($email),
                             mysql_real_escape_string($password_hashed));
+            
             $query_results = mysqli_query($connection, $query);
             
             if($query_results && (mysqli_num_rows($query_results)==1)){
@@ -108,9 +109,11 @@
                             <?php
                             if($display_error_messag){
                                echo '<div class="alert alert-danger">
-                                    <a class="close" data-dismiss="alert">×</a>
-                                    <strong>Sign in Error!</strong> Incorrect Email and Password combination.
-                                </div> ';
+                                        <a class="close" data-dismiss="alert">×</a>
+                                        <p class="text-center"> 
+                                            <strong>Sign in Error!</strong> Incorrect Email and Password combination.
+                                        </p>
+                                     </div> ';
                                }
                              ?>
                         </div>
