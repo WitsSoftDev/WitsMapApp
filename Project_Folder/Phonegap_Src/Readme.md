@@ -11,6 +11,11 @@ Remove the useless parts and then develop the mobile app.
 There are also Java parts to Phonegap but they probably dont
 need to be touched.
 
+Settings
+========
+The icon is icon.png for the app. Settings can be changed, but only Java would access global settings.
+The name may be incorrect, that will be checked during first build.
+
 Testing
 =======
 
