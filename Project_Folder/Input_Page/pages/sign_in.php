@@ -68,7 +68,7 @@
                     <div class="container">
                         <button class="btn btn-info btn-small pull-right" disabled="true">
                             <i class="icon-user icon-white"></i>
-                            Your not <b><u>Signed in</u></b>
+                            Please <b><u>log in</u></b>
                         </button>
                     </div>
                 </div>
