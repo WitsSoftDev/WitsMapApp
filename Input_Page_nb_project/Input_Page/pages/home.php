@@ -1,4 +1,8 @@
 <?php
+    require '../functions/db_connect.php';
+    include '../functions/query_functions.php';
+   
+    
     
 ?>
 <!DOCTYPE html>
@@ -17,6 +21,8 @@
                 <!-- Custome stylesheet -->
                 <link rel="stylesheet" type="text/css" href="../style/home_style.css">
                 <link rel="stylesheet" type="text/css" href="../style/general_style.css"/>
+                <script type="text/javascript" src="../scripts/add_location.js"></script>
+                <script type="text/javascript" src="../scripts/add_map.js"></script>
 
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,7 +37,7 @@
        <!-- Navigation bar -->
             <div class="navbar navbar-fixed-top navbar-inverse">
                 <div class="navbar-inner">
-                    <div class="container"> 
+                    <div class="container-fluid"> 
                         <?php
                             include '../functions/db_connect.php';
                             $connection_link = $connection;
@@ -60,26 +66,26 @@
             </div>
        
        <!-- Body content container -->
-       <div class="container">
-           <div id="page-title" class="row">
+       <div class="container-fluid">
+           <div id="page-title" class="row-fluid">
                <div class="span4">
                    
                </div>
-               <div class="span5 pull-right">
-                   <div class="input-prepend">
+               <div class="span3 pull-right">
+                   <div id="num-of-locations" class="input-prepend" rel="tooltip" data-placement="bottom" title="Current number of locations">
                        <span class="add-on reduce-height btn" disabled="true"> 
                                 <i class="icon-map-marker"></i>
                                 Locations
                        </span>
-                       <input class="input-mini reduce-width uneditable-input" type="text" placeholder="0" />
+                       <input class="input-mini reduce-width uneditable-input" type="text" placeholder="<?php echo getNumberOfLocations($connection_link); ?>" />
                    </div>
                    
-                   <div class="input-prepend padding-left-separator">
+                   <div id="num-of-maps" class="input-prepend padding-left-separator" rel="tooltip" data-placement="bottom" title="Current number of maps">
                        <span class="add-on reduce-height btn" disabled="true"> 
                                 <i class="icon-screenshot"></i>
                                 Maps
                        </span>
-                       <input class="input-mini reduce-width uneditable-input" type="text" placeholder="0" />
+                       <input class="input-mini reduce-width uneditable-input" type="text" placeholder="<?php echo getNumberOfMaps($connection_link);?>" />
                    </div>
                </div>
            </div>
@@ -87,7 +93,7 @@
            <hr />
            
            <!-- left navigation tabs -->
-           <div class="row">
+           <div class="row-fluid">
                <div class="span12">
                     <div class="tabbable tabs-right">
                         <ul class="nav nav-tabs nav-style-right">
@@ -121,16 +127,15 @@
                                 <div class="form-holder rounder-border">
                                     <div class="form-title">
                                         <h4 class="form-title-header">
-                                            <i class="icon-map-marker icon-add-margin"></i>
                                                 Add a new location 
                                         </h4>
                                     </div>
                                     
-                                    <form class="form-style" action="" method="POST">
-                                        <div class="row">
-                                            <div class="span8">
+                                    <form class="form-style" name="add_location_form" enctype="multipart/form-data">
+                                        <div class="row-fluid">
+                                            <div class="span8 offset2">
                                                 <label class="label-style" for="location-name" >Name of the location :</label>
-                                                <input id="location-name" class="input-xxlarge" name="location-name" type="text" placeholder="location name"/>
+                                                <input id="location-name" class="input-xxlarge" name="location-name" type="text" placeholder="location name" required="true"/>
 
                                                 <label class="label-style" for="location-prefix" >Prefix of the location name :</label>
                                                 <input id="location-prefix" class="input-xxlarge" name="location-prefix" type="text" placeholder="location prefix"/>
@@ -139,46 +144,65 @@
                                                 <textarea id="about-location" class="input-xxlarge" name="about-location" placeholder="Write something about the location" rows="5">
                                                 </textarea>
 
-                                                <label class="label-style" for="type-or-point">Select the type of point :</label>
-                                                <select id="type-of-point" class="input-xxlarge">
-                                                    <option value="Destination">
+                                                <label class="label-style" for="type-of-point">Select the type of point :</label>
+                                                <select id="type-of-point" class="input-xxlarge" name="type-of-point">
+                                                    <option value="destination">
                                                         Destination
                                                     </option>
 
-                                                    <option value="Exit/Entrance">
+                                                    <option value="exit/entrance">
                                                         Exit/Entrance
                                                     </option>
 
-                                                    <option value="Nodal path pont">
+                                                    <option value="nodal path pont">
                                                         Nodal path point
                                                     </option>
                                                 </select>
 
                                                 <label class="label-style" for="image-x-coordinate">X-coordinate of the location on the map :</label>
-                                                <input id="image-x-coordinate" class="input-xxlarge" name="X-coordinate" type="text" placeholder="X-coordinate of location on image"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="image-x-coordinate" class="input-xxlarge" name="X-coordinate" type="text" placeholder="X-coordinate of location on image" required="true"/>
 
                                                 <label class="label-style" for="image-Y-coordinate">Y-coordinate of the location on the map :</label>
-                                                <input id="image-Y-coordinate" class="input-xxlarge" name="Y-coordinate" type="text" placeholder="Y-coordinate of location on image"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="image-Y-coordinate" class="input-xxlarge" name="Y-coordinate" type="text" placeholder="Y-coordinate of location on image" required="true"/>
 
                                                 <label class="label-style" for="gps-latitude">GPS latitude:</label>
-                                                <input id="gps-latitude" class="input-xxlarge" name="gps-latitude" type="text" placeholder="GPS latitude coordinate of location"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="gps-latitude" class="input-xxlarge" name="gps-latitude" type="text" placeholder="GPS latitude coordinate of location" required="true"/>
 
-                                                <label class="label-style" for="gps-latitude">GPS longitude:</label>
-                                                <input id="gps-longitude" class="input-xxlarge" name="gps-longitude" type="text" placeholder="GPS longitude coordinate of location"/>
+                                                <label class="label-style" for="gps-longitude">GPS longitude:</label>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="gps-longitude" class="input-xxlarge" name="gps-longitude" type="text" placeholder="GPS longitude coordinate of location" required="true"/>
                                                 
                                                 <label class="label-style" for="location-image">Image of the location :</label>
-                                                <input name="location-image" type="file" />
+                                                <input id="location-image" name="location-image" type="file" />
                                                 
                                                 <br />
-                                                <input class="btn btn-info pull-right pull-down" type="submit" value="Add Location"/>
+                                                <input class="btn btn-info pull-right pull-down" type="button" value="Add Location" onclick="addLocationData();"/>
                                                 
                                             </div> 
                                         </div>
                                     </form>
-                                    <div id="submit-error-container">
-                                        <div class="row">
-                                            <div class="span4 offset4">
-                                                
+                                    <div id="submit-msg-container">
+                                        <div class="row-fluid">
+                                            <div id="add-location-msg-content" class="span4 offset3">
                                             </div>
                                         </div>
                                     </div>
@@ -189,81 +213,194 @@
                                 <div class="form-holder rounder-border">
                                     <div class="form-title">
                                         <h4 class="form-title-header">
-                                            <i class="icon-screenshot icon-add-margin"></i>
                                                 Add a new Map
                                         </h4>
                                     </div>
                                     
-                                    <form class="form-style" action="" method="POST">
-                                        <div class="row">
-                                            <div class="span8">
+                                    <form class="form-style" enctype="multipart/form-data">
+                                        <div class="row-fluid">
+                                            <div class="span8 offset2">
                                                 <label class="label-style" for="corner-1-gps-latitude">Corner 1 GPS-latitude coordinate :</label>
-                                                <input id="corner-1-gps-latitude" class="input-xxlarge" name="corner-1-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="corner-1-gps-latitude" class="input-xxlarge" name="corner-1-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map" required="true"/>
                                                 
                                                 <label class="label-style" for="corner-1-gps-longitude">Corner 1 GPS-longitude coordinate :</label>
-                                                <input id="corner-1-gps-longitude" class="input-xxlarge" name="corner-1-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="corner-1-gps-longitude" class="input-xxlarge" name="corner-1-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map" required="true"/>
                                                 
                                                 <label class="label-style" for="corner-2-gps-latitude">Corner 2 GPS-latitude coordinate :</label>
-                                                <input id="corner-2-gps-latitude" class="input-xxlarge" name="corner-2-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="corner-2-gps-latitude" class="input-xxlarge" name="corner-2-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map" required="true"/>
                                                 
                                                 <label class="label-style" for="corner-2-gps-longitude">Corner 2 GPS-longitude coordinate :</label>
-                                                <input id="corner-2-gps-longitude" class="input-xxlarge" name="corner-2-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="corner-2-gps-longitude" class="input-xxlarge" name="corner-2-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map" required="true"/>
                                                 
                                                 <label class="label-style" for="corner-3-gps-latitude">Corner 3 GPS-latitude coordinate :</label>
-                                                <input id="corner-3-gps-latitude" class="input-xxlarge" name="corner-3-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="corner-3-gps-latitude" class="input-xxlarge" name="corner-3-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map" required="true"/>
                                                 
                                                 <label class="label-style" for="corner-3-gps-longitude">Corner 3 GPS-longitude coordinate :</label>
-                                                <input id="corner-3-gps-longitude" class="input-xxlarge" name="corner-3-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="corner-3-gps-longitude" class="input-xxlarge" name="corner-3-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map" required="true"/>
                                                 
                                                 <label class="label-style" for="corner-4-gps-latitude">Corner 4 GPS-latitude coordinate :</label>
-                                                <input id="corner-4-gps-latitude" class="input-xxlarge" name="corner-4-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="corner-4-gps-latitude" class="input-xxlarge" name="corner-4-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map" required="true"/>
                                                 
                                                 <label class="label-style" for="corner-4-gps-longitude">Corner 4 GPS-longitude coordinate :</label>
-                                                <input id="corner-4-gps-longitude" class="input-xxlarge" name="corner-4-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map"/>
+                                                <p class="muted text-small">
+                                                    <em>
+                                                        <b class="text-error">*</b>The value entered in this field must be a number
+                                                    </em>
+                                                </p>
+                                                <input id="corner-4-gps-longitude" class="input-xxlarge" name="corner-4-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map" required="true"/>
                                                 
                                                 <label class="label-style" for="map-image-location">Add map image :</label>
-                                                <input class="input-xxlarge" type="file" name="image-location-url"/>
+                                                <input id="image-location-url" class="input-xxlarge" type="file" name="image-location-url" required="true"/>
                                                 
                                                 <br />
-                                                <input class="btn btn-info pull-right pull-down" type="submit" value="Add Map"/>
+                                                <input class="btn btn-info pull-right pull-down" type="button" value="Add Map" onclick="addMapData()"/>
                                                 
                                             </div>
                                         </div>
                                     </form>
                                     
-                                    <div id="submit-error-container">
-                                        <div class="row">
-                                            <div class="span4 offset4">
+                                    <div id="submit-msg-container">
+                                        <div class="row-fluid" >
+                                            <div class="span4 offset3" id="add-map-msg-content">
                                                 
                                             </div>
                                         </div>
-                                    </div>
-                                    
+                                    </div>                                  
                                 </div>
                                 
                             </div>
                             
                             <div class="tab-pane" id="4">
-                                <div class="row">
-                                    <div class="span10">
+                                <div class="row-fluid">
+                                    <div class="span12">
                                         <div class="tabbable tabs-left">
                                             <ul class="nav nav-tabs nav-style-left">
                                                 <li class="active">
-                                                    <a href="#4_1" data-toggle="tab">
+                                                    <a id="locations-table" href="#4_1" data-toggle="tab" rel="tooltip" data-placement="right" title="View Locations table">
                                                         <i class="icon-map-marker"></i> 
                                                     </a>
                                                 </li>                           
                                                 <li>
-                                                    <a href="#4_2" data-toggle="tab">
+                                                    <a id="maps-table" href="#4_2" data-toggle="tab" rel="tooltip" data-placement="right" title="View Maps table">
                                                         <i class="icon-screenshot"></i> 
                                                         </a>
                                                 </li>                           
                                                 <li>
-                                                    <a href="#4_3" data-toggle="tab">
+                                                    <a id="paths-table" href="#4_3" data-toggle="tab" rel="tooltip" data-placement="right" title="View Paths table">
                                                         <i class="icon-random"></i>  
                                                     </a> 
                                                 </li>
                                             </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="4_1">
+                                                    
+                                                    <?php
+                                                        $list_of_fields = array('LocationID' , 'LocationName', 'LocationPrefix', 'LocationInfo', 'ImageOfLocation', 'TypeOfPoint',
+                                                                                'ImageCoordinatex', 'ImageCoordinateY', 'GPSLatitude', 'GPSLongitude', 'Action');
+                                                        
+                                                        $location_query = "SELECT LocationID, LocationName, LocationPrefix, LocationInfo, ImageOfLocation, TypeOfPoint, "
+                                                                            . "ImageCoordinatex, ImageCoordinateY, GPSLatitude, GPSLongitude FROM locationdata";
+                                                        
+                                                        $query_run = mysqli_query($connection, $location_query);
+                                                    
+                                                         if(mysqli_num_rows($query_run)>0){
+                                                            echo '<table class="table table-condensed table-striped table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>#</th> 
+                                                                            <th>Name</th>
+                                                                            <th>Prefix</th>
+                                                                            <th>About</th>
+                                                                            <th>Image url</th>
+                                                                            <th>Type of point</th>
+                                                                            <th>X-coordinate</th>
+                                                                            <th>Y-coordinate</th>
+                                                                            <th>GPS latitude</th>
+                                                                            <th>GPS longitude</th>
+                                                                            <th>Action</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>';
+                                                            
+                                                            
+                                                            while ($location_row = mysqli_fetch_array($query_run)){
+                                                                echo '<tr>';
+                                                                foreach ($list_of_fields as $field){
+                                                                    if($field === "Action"){
+                                                                           echo '<td> <button id="" class="btn btn-mini btn-danger" data-toggle="modal" href="#my-modal"><i class="icon-trash icon-white"></i> Delete</button></td>';
+                                                                    }else{
+                                                                        echo '<td>'.$location_row[$field].'</td>';
+                                                                    }
+                                                                }
+                                                                echo '</tr>';
+                                                            }
+                                                            echo '</tbody>
+                                                                  </table>';
+                                                        }else{
+                                                            echo '  <div class="well">
+                                                                        <p class="text-info text-center"><b>Table is empty</b></p>
+                                                                    </div>';
+                                                        }
+                                                    ?>
+                                                    
+                                                    <div id="my-modal" class="modal hide fade">
+                                                            <div class="modal-header">
+                                                                    <a class="close" data-dismiss="modal">&times;</a>
+                                                                    <h3 style="font-size: 22px;">Delete Location</h3>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                    <button class="btn btn-small" data-dismiss="modal"><i class="icon-arrow-left"></i> Cancel</button>
+                                                                    <button id="locationID" class="btn btn-danger btn-small"><i class="icon-trash icon-white"></i> Delete</button>
+
+                                                            </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="tab-pane" id="4_2">
+                                                    <p>Howdy, I'm in Section 2.</p>
+                                                </div>
+                                                <div class="tab-pane" id="4_3">
+                                                    <p>Howdy, I'm in Section 3.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     
@@ -282,5 +419,13 @@
         <!-- JavaScript -->
         <script type="text/javascript" src ="../bootstrap/js/jquery.min.js"></script>
         <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../scripts/plugins/tooltip.js"></script>
+        <script type="text/javascript">
+            $("#num-of-locations").tooltip();
+            $("#num-of-maps").tooltip();
+            $("#locations-table").tooltip();
+            $("#maps-table").tooltip();
+            $("#paths-table").tooltip();
+        </script>
 	</body>
 </html>

@@ -32,7 +32,7 @@ USE `wits_map_app_db`;
 
 CREATE TABLE IF NOT EXISTS `locationdata` (
   `LocationID` int(11) NOT NULL AUTO_INCREMENT,
-  `TypeOfPoint` text NOT NULL,
+  `TypeOfPoint` char(25) NOT NULL,
   `MapID` int(11) NOT NULL,
   `ImageCoordinateX` int(11) NOT NULL,
   `ImageCoordinateY` int(11) NOT NULL,
@@ -43,8 +43,7 @@ CREATE TABLE IF NOT EXISTS `locationdata` (
   `LocationName` char(100) DEFAULT NULL,
   `LocationPrefix` char(10) DEFAULT NULL,
   PRIMARY KEY (`LocationID`),
-  KEY `LocationID` (`LocationID`),
-  KEY `LocationID_2` (`LocationID`)
+  KEY `LocationID` (`LocationID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
@@ -73,9 +72,7 @@ CREATE TABLE IF NOT EXISTS `map` (
   `Corner4GPSLatitude` double NOT NULL,
   `Corner4GPSLongitude` double NOT NULL,
   PRIMARY KEY (`MapID`),
-  KEY `MapID` (`MapID`),
-  KEY `MapID_2` (`MapID`),
-  KEY `MapID_3` (`MapID`)
+  KEY `MapID` (`MapID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
