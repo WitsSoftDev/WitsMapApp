@@ -92,15 +92,17 @@
                     <div class="tabbable tabs-right">
                         <ul class="nav nav-tabs nav-style-right">
                             <li class="active">
+                                <a class="link-shaded" href="#2" data-toggle="tab">
+                                    <i class="icon-screenshot"></i> 
+                                    Add Map</a>
+                            </li>        
+                        
+                            <li>
                                 <a class="link-shaded" href="#1" data-toggle="tab">
                                     <i class="icon-map-marker"></i> 
                                     Add Location</a>
                             </li>                           
-                            <li>
-                                <a class="link-shaded" href="#2" data-toggle="tab">
-                                    <i class="icon-screenshot"></i> 
-                                    Add Map</a>
-                            </li>                           
+                                                   
                             
                             <li>
                                 <a class="link-shaded" href="#4" data-toggle="tab">
