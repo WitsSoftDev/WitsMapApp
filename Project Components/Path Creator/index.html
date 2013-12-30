@@ -11,19 +11,47 @@
             .PathCreator {
                 
             }
+
+            .draggable {
+                
+            }
+
+            #draggable {
+                
+            }
         </style>
 
         <title>Path Creator</title>
     </head>
     <body>
-        
+        <script>
+            var mapLoc;
+            function mapLoc(map) {
+                mapLoc = map;
+            }
+
+            function DisplayMap() {
+                document.write('<center><img src="' + mapLoc + '" seamless></center>');
+            }
+
+        </script>
         <div class="PathCreator">
-                
+            <div>
+                <script>
+                    mapLoc("map.jpg");
+                    DisplayMap();
+                </script>
+            </div> 
         </div>
         
         
-         <!-- JavaScript -->
+        <!-- JavaScript -->
+        
         <script type="text/javascript" src ="../../Project_Folder/Input_Page/bootstrap/js/jquery.min.js"></script>
         <script type="text/javascript" src="../../Project_Folder/Input_Page/bootstrap/js/bootstrap.min.js"></script>
+        
+        <!-- Custom javascript-->
+        
+
     </body>
 </html>
