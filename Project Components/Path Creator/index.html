@@ -12,6 +12,15 @@
                 
             }
 
+            #PathCreator {
+                
+            }
+
+            .map {
+                overflow: hidden;
+                position: relative;
+            }
+
             .draggable {
                 
             }
@@ -25,21 +34,19 @@
     </head>
     <body>
         <script>
-            var mapLoc;
-            function mapLoc(map) {
-                mapLoc = map;
+            function DisplayMap(mapLoc) {
+                
+                document.getElementById("PathCreator").innerHTML = '<center><iframe class="map" src="' + mapLoc + '" seamless><p>Your browser does not support iframes. <br/>Please Change To a More Enlightened Browser.</p></iframe></center>';
             }
 
-            function DisplayMap() {
-                document.write('<center><img src="' + mapLoc + '" seamless></center>');
-            }
 
+            
         </script>
+        <!-- perhaps use javascript html5 canvas tags to draw image -->
         <div class="PathCreator">
-            <div>
+            <div id="PathCreator">
                 <script>
-                    mapLoc("map.jpg");
-                    DisplayMap();
+                    DisplayMap("map.jpg");
                 </script>
             </div> 
         </div>
@@ -51,7 +58,8 @@
         <script type="text/javascript" src="../../Project_Folder/Input_Page/bootstrap/js/bootstrap.min.js"></script>
         
         <!-- Custom javascript-->
-        
+        <!--When complete all javascript will happen on a specific action, since it will be connected to everything else. The parts which call functions must
+            be replaced by action events calling those functions-->
 
     </body>
 </html>
