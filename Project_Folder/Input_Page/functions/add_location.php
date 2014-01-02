@@ -49,13 +49,15 @@
             $insert_query_results = mysqli_query($connection, $insert_query);
             
             if($insert_query_results){
-               echo '<div class="alert alert-success">
-                        <a class="close" data-dismiss="alert">×</a>
-                        <strong>Successful!</strong> The location <b>'.$locationName.'</b> was successfully added.
+               echo '<div id="message-box-success" class="message-box">
+                        <a class="close fade-out">×</a>
+                        <p class="text-center">
+                            <strong>Successful!</strong> The location <b>'.$locationName.'</b> was successfully added.
+                        </p>
                      </div>';
             }else{
-               echo '<div class="alert alert-danger">
-                        <a class="close" data-dismiss="alert">×</a>
+               echo '<div id="message-box-error" class="message-box">
+                        <a class="close fade-out">×</a>
                         <p class="text-center"
                             <strong>Insertion Error!</strong> The Location<b> '.$locationName.'</b> already exists
                         </p>
@@ -63,9 +65,11 @@
             }
             
         }else{
-           echo '<div class="alert alert-danger">
-                    <a class="close" data-dismiss="alert">×</a>
-                    <strong>Input Error!</strong> Some required values are spaces.
+           echo '<div id="message-box-empty-values" class="message-box">
+                    <a class="close fade-out">×</a>
+                    <p class="text-center">
+                        <strong>Insertion Error!</strong> Some required fields are not set.
+                    </p>
                  </div>';
         }
     }

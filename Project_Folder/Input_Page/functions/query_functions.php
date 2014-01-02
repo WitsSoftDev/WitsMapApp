@@ -12,6 +12,15 @@ function getNumberOfLocations($connection){
     }
 }
 
+//get a specific location
+function getLocationName($connection,$LocationID){
+    $query = mysqli_query($connection, "SELECT LocationName FROM locationdata WHERE LocationID=".$LocationID);
+    if($query){
+        $row = mysqli_fetch_array($query);
+        return $row['LocationName'];
+    }
+}
+
 function getNumberOfMaps($connection){
     $query = mysqli_query($connection, "SELECT MapID FROM map");
     

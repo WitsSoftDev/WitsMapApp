@@ -85,9 +85,17 @@ a:focus {
     padding-right: 0px;
 }
 
+div.gray-bg {
+    position: relative;
+    padding: 3px;
+    background: #efefef;
+    border-radius: 4px;
+}
+
 .rounder-border {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    background-color: white;
 }
 
 .form-title{
@@ -138,3 +146,14 @@ div#submit-msg-container {
     font-size: 13px;
 }
 
+p {
+    margin: 0px;
+}
+
+label.error {
+    display: inline;
+    position: relative;
+    margin-left: 10px;
+    top: -5px;
+    color: rgb(185, 74, 72);
+}

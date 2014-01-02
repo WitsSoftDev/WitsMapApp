@@ -54,20 +54,26 @@ if(isset($_FILES['image-location-url']) && isset($_FILES['image-location-url']))
         $add_map_query_results = mysqli_query($connection, $add_map_query);
 
         if($add_map_query_results){
-            echo '<div class="alert alert-success">
-                     <a class="close" data-dismiss="alert">×</a>
-                     <strong>Successful!</strong> The map was successfully added.
+            echo '<div class="message-box">
+                     <a class="close fade-out">×</a>
+                     <p class="text-center">
+                        <strong>Successful!</strong> The map was successfully added.
+                     </p>
                   </div>';
         }else {
-            echo '<div class="alert alert-danger">
-                     <a class="close" data-dismiss="alert">×</a>
-                     <strong>Insertion Error!</strong> The insertion was not sucessful.
+            echo '<div class="message-box">
+                     <a class="close fade-out">×</a>
+                     <p class="text-center">
+                        <strong>Insertion Error!</strong> The insertion was not sucessful.
+                     </p>
                   </div>';
         }
      }else{
-         echo '<div class="alert alert-danger">
-                 <a class="close" data-dismiss="alert">×</a>
-                 <strong>Insertion Error!</strong> All fields must be filled in.
+         echo '<div class="message-box">
+                 <a class="close fade-out">×</a>
+                 <p class="text-center">
+                    <strong>Insertion Error!</strong> some required fileds are not set.
+                 </p>
               </div>';
      }
     
