@@ -217,7 +217,7 @@
                                             <br />
                                             <input id="add-location-btn" class="btn btn-info pull-right pull-down" type="button" value="Add Location"/>
 
-                                        </div> 
+                                        </div>
                                     </div>
                                 </form>
                                 <div id="submit-msg-container">
