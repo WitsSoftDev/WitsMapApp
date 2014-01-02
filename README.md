@@ -14,6 +14,12 @@ will allow the user to select on a map where they would
 like to go and from their current position to their destination, 
 then it will calculate the shortest path and display it to the user.
 
+Builds
+======
+https://build.phonegap.com/apps/717637/builds
+You will need to request to become a collaborator
+The build is done by yuploading a .zip of the repo
+
 Original Source
 --------------
 
