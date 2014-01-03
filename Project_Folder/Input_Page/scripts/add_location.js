@@ -53,12 +53,8 @@
                 return false;
             }
             
-            //image validation if the image is selected
             var location_image_data = $("input#location-image").prop("files")[0];
-            
-            var dataForm = "location-name="+location_name+"&location-prefix="+location_prefix+"&about-location="+about_location+"&type-of-point="+type_of_point
-                            +"&X-coordinate="+image_x_coordinate+"&Y-coordinate="+image_y_coordinate+"&gps-latitude="+gps_latitude+"&gps-longitude="+gps_longitude;
-            
+
             var formdata = new FormData();
             formdata.append("location-image",location_image_data);
             formdata.append("location-name",location_name);
