@@ -19,6 +19,7 @@
             $query = sprintf("SELECT userID FROM users WHERE userEmailAddress='%s' AND userPassword='%s'",
                             mysql_real_escape_string($email),
                             mysql_real_escape_string($password_hashed));
+            
             $query_results = mysqli_query($connection, $query);
             
             if($query_results && (mysqli_num_rows($query_results)==1)){
@@ -104,13 +105,15 @@
                 </div>
                 <div id="sign-in-error-container">
                     <div class="row">
-                        <div class="span4 offset4">
+                        <div class="span5 offset3">
                             <?php
                             if($display_error_messag){
-                               echo '<div class="alert alert-danger">
-                                    <a class="close" data-dismiss="alert">×</a>
-                                    <strong>Sign in Error!</strong> Incorrect Email and Password combination.
-                                </div> ';
+                               echo '<div id="fade-in-out" class="message-box" "display: none;">
+                                        <a id="fade-out" class="close">&times;</a>
+                                        <p class="text-center"> 
+                                            Incorrect Email and Password combination.
+                                        </p>
+                                     </div> ';
                                }
                              ?>
                         </div>
@@ -124,5 +127,14 @@
         <!-- JavaScript -->
 		<script type="text/javascript" src ="../bootstrap/js/jquery.min.js"></script>
 		<script type="text/javascript" src="../boostrap/js/bootstrap.min.js"></script>
+                <script type="text/javascript">
+                    $("#fade-in-out").fadeIn("slow");
+                    
+                    //fade out effect. needs to be in its own script after testing
+                    $("#fade-out").click(function (){
+                       $("#fade-in-out").fadeOut("slow"); 
+                    });
+                    
+                </script>
     </body>
 </html>
