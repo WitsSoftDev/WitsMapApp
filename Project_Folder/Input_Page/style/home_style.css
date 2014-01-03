@@ -157,3 +157,8 @@ label.error {
     top: -5px;
     color: rgb(185, 74, 72);
 }
+
+div#location-delete-msg-content {
+    position: fixed;
+    width: 83%;
+}
