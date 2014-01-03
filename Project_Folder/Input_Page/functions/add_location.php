@@ -5,9 +5,36 @@
    require './db_connect.php';
     
     //image data variables
-    if(isset($_FILES['location-image']) && isset($_FILES['location-image'])){
+    if(isset($_FILES['location-image']) && !empty($_FILES['location-image'])){
         $image_name = $_FILES['location-image']['name'];
+        $image_size = $_FILES['location-image']['size'];
+        $image_type = $_FILES['location-image']['type'];
         $temp_location = $_FILES['location-image']['tmp_name'];
+        
+        //image validation
+        $image_file_info = basename($image_name);
+        
+        //image size must be less than 5mb
+        if($image_size > 5242880){
+            die('<div id="message-box-error" class="message-box">
+                        <a class="close fade-out">×</a>
+                        <p class="text-center"
+                            <strong>Image Error!</strong> The image file is too larege.
+                        </p>
+                     </div>');
+        }else{
+            //checking if the image file is a jpg or jpeg or png
+            $ext = strtolower(substr($image_file_info, strrpos($image_file_info,'.')+1));
+            
+            if(!(($ext == "jpg" || $ext == "jpeg" || $ext == "png") && ($image_type == "image/jpeg" || $image_type == "image/png"))){
+                die('<div id="message-box-error" class="message-box">
+                        <a class="close fade-out">×</a>
+                        <p class="text-center"
+                            <strong>Image Error!</strong> invalid file type.
+                        </p>
+                     </div>');
+            }
+        }
     }
     
     $image_location = "../uploads/locations/";
@@ -59,7 +86,7 @@
                echo '<div id="message-box-error" class="message-box">
                         <a class="close fade-out">×</a>
                         <p class="text-center"
-                            <strong>Insertion Error!</strong> The Location<b> '.$locationName.'</b> already exists
+                            <strong>Insertion Error!</strong> The Location<b> '.$locationName.'</b> already exists.
                         </p>
                      </div>';
             }
