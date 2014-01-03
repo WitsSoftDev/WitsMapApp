@@ -70,7 +70,7 @@
            </div>
            <div class="span3 pull-right">
                <div id="num-of-locations" class="input-prepend" rel="tooltip" data-placement="bottom" title="Current number of locations">
-                   <span class="add-on reduce-height btn" disabled="true"> 
+                   <span class="add-on reduce-height btn"> 
                             <i class="icon-map-marker"></i>
                             Locations
                    </span>
@@ -78,7 +78,7 @@
                </div>
 
                <div id="num-of-maps" class="input-prepend padding-left-separator" rel="tooltip" data-placement="bottom" title="Current number of maps">
-                   <span class="add-on reduce-height btn" disabled="true"> 
+                   <span class="add-on reduce-height btn"> 
                             <i class="icon-screenshot"></i>
                             Maps
                    </span>
