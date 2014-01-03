@@ -9,7 +9,9 @@
     ob_start();
     session_start();
     
-    $refere = $_SERVER['HTTP_REFERER'];
+    if(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])){
+        $refere = $_SERVER['HTTP_REFERER'];
+    }
     
     function getCurrentFileName(){
         return $_SERVER['SCRIPT_NAME'];
