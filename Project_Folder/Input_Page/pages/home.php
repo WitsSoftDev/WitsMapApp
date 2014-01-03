@@ -393,7 +393,9 @@
                                         <div class="tab-content">
                                             <!-- view location table tab -->
                                             <div class="tab-pane active" id="4_1">
-
+                                                <div id="location-delete-msg-content">
+                                                    
+                                                </div>
                                                 <?php
                                                 /*
                                                  * Script used to fetch data from the locations table and display it in the appropriate place
@@ -464,14 +466,12 @@
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                             <button class="btn btn-small" data-dismiss="modal"><i class="icon-arrow-left"></i> Cancel</button>
-                                                                            <button id="'.$location_row['LocationID'].'" class="btn btn-danger btn-small" onclick="delete_location('.$location_row['LocationID'].');"><i class="icon-trash icon-white"></i> Delete</button>
+                                                                            <button class="btn btn-danger btn-small" onclick="delete_location('.$location_row['LocationID'].',\''.$location_row['LocationName'].'\');"><i class="icon-trash icon-white"></i> Delete</button>
 
                                                                     </div>
                                                             </div>';
                                                     }
                                                 ?>
-
-                                                
 
                                             </div>
                                             <div class="tab-pane" id="4_2">
