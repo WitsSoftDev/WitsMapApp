@@ -131,7 +131,7 @@
                                     </h4>
                                 </div>
 
-                                <form class="form-style" name="add_location_form" enctype="multipart/form-data">
+                                <form id="add-location-form" class="form-style" name="add-location-form" enctype="multipart/form-data">
                                     <div class="row-fluid">
                                         <div class="span8 offset2">
                                             <label class="label-style" for="location-name" >Name of the location :</label>
@@ -240,7 +240,7 @@
                                             Add a new Map
                                     </h4>
                                 </div>
-
+                                <!--add map form -->
                                 <form class="form-style" enctype="multipart/form-data">
                                     <div class="row-fluid">
                                         <div class="span8 offset2">
@@ -251,7 +251,11 @@
                                                 </em>
                                             </p>
                                             <input id="corner-1-gps-latitude" class="input-xxlarge" name="corner-1-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map" required="true"/>
-
+                                            <label class="error" id="corner-1-gps-latitude-error" for="corner-1-gps-latitude">
+                                                <span class="text-error">*</span>
+                                                <strong>This field must be filled in</strong>
+                                            </label>
+                                            
                                             <label class="label-style" for="corner-1-gps-longitude">Corner 1 GPS-longitude coordinate :</label>
                                             <p class="muted text-small">
                                                 <em>
@@ -259,7 +263,11 @@
                                                 </em>
                                             </p>
                                             <input id="corner-1-gps-longitude" class="input-xxlarge" name="corner-1-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map" required="true"/>
-
+                                            <label class="error" id="corner-1-gps-longitude-error" for="corner-1-gps-longitude">
+                                                <span class="text-error">*</span>
+                                                <strong>This field must be filled in</strong>
+                                            </label>
+                                            
                                             <label class="label-style" for="corner-2-gps-latitude">Corner 2 GPS-latitude coordinate :</label>
                                             <p class="muted text-small">
                                                 <em>
@@ -267,7 +275,11 @@
                                                 </em>
                                             </p>
                                             <input id="corner-2-gps-latitude" class="input-xxlarge" name="corner-2-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map" required="true"/>
-
+                                            <label class="error" id="corner-2-gps-latitude-error" for="corner-2-gps-latitude">
+                                                <span class="text-error">*</span>
+                                                <strong>This field must be filled in</strong>
+                                            </label>
+                                            
                                             <label class="label-style" for="corner-2-gps-longitude">Corner 2 GPS-longitude coordinate :</label>
                                             <p class="muted text-small">
                                                 <em>
@@ -275,7 +287,11 @@
                                                 </em>
                                             </p>
                                             <input id="corner-2-gps-longitude" class="input-xxlarge" name="corner-2-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map" required="true"/>
-
+                                            <label class="error" id="corner-2-gps-longitude-error" for="corner-2-gps-longitude">
+                                                <span class="text-error">*</span>
+                                                <strong>This field must be filled in</strong>
+                                            </label>
+                                            
                                             <label class="label-style" for="corner-3-gps-latitude">Corner 3 GPS-latitude coordinate :</label>
                                             <p class="muted text-small">
                                                 <em>
@@ -283,7 +299,11 @@
                                                 </em>
                                             </p>
                                             <input id="corner-3-gps-latitude" class="input-xxlarge" name="corner-3-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map" required="true"/>
-
+                                            <label class="error" id="corner-3-gps-latitude-error" for="corner-3-gps-latitude">
+                                                <span class="text-error">*</span>
+                                                <strong>This field must be filled in</strong>
+                                            </label>
+                                            
                                             <label class="label-style" for="corner-3-gps-longitude">Corner 3 GPS-longitude coordinate :</label>
                                             <p class="muted text-small">
                                                 <em>
@@ -291,7 +311,11 @@
                                                 </em>
                                             </p>
                                             <input id="corner-3-gps-longitude" class="input-xxlarge" name="corner-3-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map" required="true"/>
-
+                                            <label class="error" id="corner-3-gps-longitude-error" for="corner-3-gps-longitude">
+                                                <span class="text-error">*</span>
+                                                <strong>This field must be filled in</strong>
+                                            </label>
+                                            
                                             <label class="label-style" for="corner-4-gps-latitude">Corner 4 GPS-latitude coordinate :</label>
                                             <p class="muted text-small">
                                                 <em>
@@ -299,7 +323,11 @@
                                                 </em>
                                             </p>
                                             <input id="corner-4-gps-latitude" class="input-xxlarge" name="corner-4-gps-latitude" type="text" placeholder="A Corner point latitude coordinate for the map" required="true"/>
-
+                                            <label class="error" id="corner-4-gps-latitude-error" for="corner-4-gps-latitude">
+                                                <span class="text-error">*</span>
+                                                <strong>This field must be filled in</strong>
+                                            </label>
+                                            
                                             <label class="label-style" for="corner-4-gps-longitude">Corner 4 GPS-longitude coordinate :</label>
                                             <p class="muted text-small">
                                                 <em>
@@ -307,12 +335,20 @@
                                                 </em>
                                             </p>
                                             <input id="corner-4-gps-longitude" class="input-xxlarge" name="corner-4-gps-longitude" type="text" placeholder="A Corner point longitude coordinate for the map" required="true"/>
-
-                                            <label class="label-style" for="map-image-location">Add map image :</label>
+                                            <label class="error" id="corner-4-gps-longitude-error" for="corner-4-gps-longitude">
+                                                <span class="text-error">*</span>
+                                                <strong>This field must be filled in</strong>
+                                            </label>
+                                            
+                                            <label class="label-style" for="image-location-url">Add map image :</label>
                                             <input id="image-location-url" class="input-xxlarge" type="file" name="image-location-url" required="true"/>
+                                            <label class="error" id="image-location-url-error" for="image-location-url">
+                                                <span class="text-error">*</span>
+                                                <strong>Image must be selected</strong>
+                                            </label>
 
                                             <br />
-                                            <input class="btn btn-info pull-right pull-down" type="button" value="Add Map" onclick="addMapData()"/>
+                                            <input id="add-map-btn" class="btn btn-info pull-right pull-down" type="button" value="Add Map"/>
 
                                         </div>
                                     </div>
@@ -320,7 +356,7 @@
 
                                 <div id="submit-msg-container">
                                     <div class="row-fluid" >
-                                        <div class="span4 offset3" id="add-map-msg-content">
+                                        <div id="add-map-msg-content" class="span4 offset3" >
 
                                         </div>
                                     </div>
