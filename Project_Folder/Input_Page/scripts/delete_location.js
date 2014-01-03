@@ -1,25 +1,27 @@
 /* 
  * 
  */
+    function delete_location(LocationID,LocationName){
+        var location_id = "LocationID="+LocationID;
+        var location_name = "LocationName="+LocationName;
+        
+        var data = location_id+"&"+location_name;
 
-function delete_location(LocationID){
-    
-    var xmlhttp;
-    if(window.XMLHttpRequest){
-        xmlhttp = new XMLHttpRequest;
-    }else{
-        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+        $.ajax({
+          url: '../functions/delete_location.php',
+          type: 'POST',
+          data: data,
+
+                success: function(data, textStatus, jqXHR) {
+                    $("#my-modal-"+LocationID).modal('hide');
+                    $("div#location-delete-msg-content").html(data).hide()
+                       .fadeIn("slow")
+                       .delay(3000)
+                       .fadeOut("slow");
+                }
+
+        });
     }
+
     
-    xmlhttp.onreadystatechange = function (){
-        if(xmlhttp.readyState === 4 && xmlhttp.Status === 200){
-            document.getElementById().innerHTML = xmlhttp.responseText;
-        }
-    };
-    
-    var data="LocationID="+LocationID;
-    xmlhttp.open("POST","../functions/delete_location.php",true);
-    xmlhttp.setRequestHeader("content-type","application/x-www-form-urlencoded");
-    xmlhttp.send(data);
-}
 
