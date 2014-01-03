@@ -19,7 +19,7 @@
             
             var location_prefix = $('input#location-prefix').val();
             var about_location = $('textarea#about-location').val();
-            var type_of_point = $('input#type-of-point').val();
+            var type_of_point = $('select#type-of-point').val();
             
             var image_x_coordinate = $('input#image-x-coordinate').val();
             if(image_x_coordinate === ""){
@@ -54,17 +54,30 @@
             }
             
             //image validation if the image is selected
-            var location_image = $("input#location-image").files[0];
-            alert(location_image.name);
+            var location_image_data = $("input#location-image").prop("files")[0];
             
             var dataForm = "location-name="+location_name+"&location-prefix="+location_prefix+"&about-location="+about_location+"&type-of-point="+type_of_point
                             +"&X-coordinate="+image_x_coordinate+"&Y-coordinate="+image_y_coordinate+"&gps-latitude="+gps_latitude+"&gps-longitude="+gps_longitude;
             
+            var formdata = new FormData();
+            formdata.append("location-image",location_image_data);
+            formdata.append("location-name",location_name);
+            formdata.append("location-prefix",location_prefix);
+            formdata.append("about-location",about_location);
+            formdata.append("type-of-point",type_of_point);
+            formdata.append("X-coordinate",image_x_coordinate);
+            formdata.append("Y-coordinate",image_y_coordinate);
+            formdata.append("gps-latitude",gps_latitude);
+            formdata.append("gps-longitude",gps_longitude);
+            
             //submit form
             $.ajax({
+                cache: false,
+                contentType: false,
+                processData: false,
                 type: 'POST',
                 url: "../functions/add_location.php",
-                data: dataForm,
+                data: formdata,
                 success: function(data, textStatus, jqXHR) {
                 $("div#add-location-msg-content").html(data)
                         .hide()
