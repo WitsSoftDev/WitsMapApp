@@ -93,7 +93,7 @@ div.gray-bg {
 }
 
 .rounder-border {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     background-color: white;
 }
@@ -105,6 +105,7 @@ div.gray-bg {
     background-color: rgb(244, 244, 244);
     background-image: linear-gradient(rgb(250, 250, 250), rgb(234, 234, 234));
     background-repeat: repeat-x;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px 4px 0px 0px;
     
 }
@@ -138,6 +139,7 @@ div#submit-msg-container {
     height: 70px;
     padding-top: 10px;
     background-color: rgb(244, 244, 244);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
