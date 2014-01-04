@@ -540,7 +540,8 @@
        </div>
     </div>
     <!-- JavaScript -->
-    <script type="text/javascript" src ="../bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src ="../scripts/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src ="../scripts/plugins/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../scripts/plugins/tooltip.js"></script>
     
