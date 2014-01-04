@@ -96,14 +96,21 @@
                 url: "../functions/add_map.php",
                 data: add_map_form_data,
                 success: function(data, textStatus, jqXHR) {
-                    $("div#add-map-msg-content").html(data)
+                    
+                    var response = JSON.parse(data);
+                    var status = response["status"];
+                    var message = response["message"];
+                    
+                    $("div#add-map-msg-content").html(message)
                             .hide()
                             .fadeIn('slow')
                             .delay(3000)
                             .fadeOut("slow");
 
                         //clear from fields
-                        $("form#add-map-form")[0].reset();
+                        if(status === "success"){
+                            $("form#add-map-form")[0].reset();
+                        }
                 }
             });
         });

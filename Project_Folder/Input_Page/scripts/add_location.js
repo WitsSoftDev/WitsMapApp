@@ -75,14 +75,21 @@
                 url: "../functions/add_location.php",
                 data: formdata,
                 success: function(data, textStatus, jqXHR) {
-                    $("div#add-location-msg-content").html(data)
+                    
+                    var response = JSON.parse(data);
+                    var status = response["status"];
+                    var message = response["message"];
+                    
+                    $("div#add-location-msg-content").html(message)
                             .hide()
                             .fadeIn('slow')
-                            .delay(3000)
+                            .delay(4000)
                             .fadeOut("slow");
                     
-                    //clear from fields
-                    $("form#add-location-form")[0].reset();
+                    //clear from fields if data was successfully added to the database
+                    if(status === "success"){
+                        $("form#add-location-form")[0].reset();
+                    }
                 
             }
             });
