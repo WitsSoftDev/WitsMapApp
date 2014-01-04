@@ -13,7 +13,7 @@
             }
 
             #PathCreator {
-                
+                 
             }
 
             .map {
@@ -36,10 +36,25 @@
         <script>
             function DisplayMap(mapLoc) {
                 
-                document.getElementById("PathCreator").innerHTML = '<center><iframe class="map" src="' + mapLoc + '" seamless><p>Your browser does not support iframes. <br/>Please Change To a More Enlightened Browser.</p></iframe></center>';
+                //document.getElementById("PathCreator").innerHTML = '<center><iframe class="map" src="' + mapLoc + '" seamless><p>Your browser does not support iframes. <br/>Please Change To a More Enlightened Browser.</p></iframe></center>';
             }
 
+            // Make sure it always starts @ zero position for below calcs to work
+            $("#my-image").css({ top: 0, left: 0 });
 
+            var maskWidth = $("#my-mask").width();
+            var maskHeight = $("#my-mask").height();
+            var imgPos = $("#my-image").offset();
+            var imgWidth = $("#my-image").width();
+            var imgHeight = $("#my-image").height();
+
+            var x1 = (imgPos.left + maskWidth) - imgWidth;
+            var y1 = (imgPos.top + maskHeight) - imgHeight;
+            var x2 = imgPos.left;
+            var y2 = imgPos.top;
+
+            $("#my-image").draggable({ containment: [x1, y1, x2, y2] });
+            $("#my-image").css({ cursor: 'move' });
             
         </script>
         <!-- perhaps use javascript html5 canvas tags to draw image -->
@@ -50,7 +65,11 @@
                 </script>
             </div> 
         </div>
-        
+        <div>
+        <div id="my-mask" style="width: 200px; height: 200px; overflow: hidden;">
+           <img id="my-image" src="map.jpg" width="1000" height="1000"/>
+        </div>
+        </div>
         
         <!-- JavaScript -->
         
