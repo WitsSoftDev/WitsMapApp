@@ -564,10 +564,6 @@
         $("#locations-table").tooltip();
         $("#maps-table").tooltip();
         $("#paths-table").tooltip();
-        
-        $(".fade-out").click(function (){
-            $("div.message-box").fadeOut("slow");
-        });
     </script>
 </body>
 </html>
