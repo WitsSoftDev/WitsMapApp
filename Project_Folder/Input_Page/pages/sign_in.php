@@ -108,6 +108,7 @@
                         <div class="span5 offset3">
                             <?php
                             if($display_error_messag){
+
                                echo '<div id="fade-in-out" class="message-box" "display: none;">
                                         <a id="fade-out" class="close">&times;</a>
                                         <p class="text-center"> 
