@@ -126,7 +126,7 @@
                             <div class="gray-bg">
                             <div class="form-holder rounder-border">
                                 <div class="form-title">
-                                    <h4 class="form-title-header">
+                                    <h4 class="form-title-header text-center">
                                             Add a new location 
                                     </h4>
                                 </div>
@@ -236,12 +236,12 @@
                             <div class="gray-bg">
                             <div class="form-holder rounder-border">
                                 <div class="form-title">
-                                    <h4 class="form-title-header">
+                                    <h4 class="form-title-header text-center">
                                             Add a new Map
                                     </h4>
                                 </div>
                                 <!--add map form -->
-                                <form class="form-style" enctype="multipart/form-data">
+                                <form id="add-map-form" class="form-style" enctype="multipart/form-data">
                                     <div class="row-fluid">
                                         <div class="span8 offset2">
                                             <label class="label-style" for="corner-1-gps-latitude">Corner 1 GPS-latitude coordinate :</label>
@@ -370,6 +370,7 @@
                         <div class="tab-pane" id="4">
                             <div class="row-fluid">
                                 <div class="span12">
+                                    
                                     <!-- right nav tabs to view the different tables in the db -->
                                     <div class="tabbable tabs-left">
                                         <ul class="nav nav-tabs nav-style-left">
@@ -389,10 +390,19 @@
                                                 </a> 
                                             </li>
                                         </ul>
+                                        
                                         <!-- tab content for the right view tables nav -->
                                         <div class="tab-content">
+                                            
                                             <!-- view location table tab -->
                                             <div class="tab-pane active" id="4_1">
+                                                <div class="gray-bg">
+                                                    <div class="rounder-border">
+                                                        <div class="form-title">
+                                                            <h4 class="form-title-header text-center">
+                                                                    Locations' Table
+                                                            </h4>
+                                                        </div>
                                                 <div id="location-delete-msg-content">
                                                     
                                                 </div>
@@ -410,7 +420,7 @@
                                                      
                                                     //echo the table structure only if there's something in the database
                                                      if(mysqli_num_rows($query_run)>0){
-                                                        echo '<table class="table table-condensed table-striped table-bordered">
+                                                        echo '<table class="table table-condensed table-striped table-bordered add-margin" style="width: 99%;">
                                                                 <thead>
                                                                     <tr>
                                                                         <th id="th-location-id" rel="tooltip" title="Location ID">#</th> 
@@ -443,7 +453,7 @@
                                                         echo '</tbody>
                                                               </table>';
                                                     }else{
-                                                        echo '  <div class="well">
+                                                        echo '  <div class="well add-margin">
                                                                     <p class="text-info text-center"><b>Table is empty</b></p>
                                                                 </div>';
                                                     }
@@ -472,29 +482,48 @@
                                                             </div>';
                                                     }
                                                 ?>
-
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="tab-pane" id="4_2">
+                                                <div class="gray-bg">
+                                                    <div class="rounder-border">
+                                                        <div class="form-title">
+                                                            <h4 class="form-title-header text-center">
+                                                                    Maps' Table
+                                                            </h4>
+                                                        </div>
                                                 <?php
                                                     if(getNumberOfMaps($connection) > 0){
                                                         //maps table to go here
                                                     }else{
-                                                        echo '  <div class="well">
+                                                        echo '  <div class="well add-margin">
                                                                     <p class="text-info text-center"><b>Table is empty</b></p>
                                                                 </div>';
                                                     }
                                                 ?>
+                                                    </div>
+                                                    </div>
                                             </div>
                                             <div class="tab-pane" id="4_3">
+                                                <div class="gray-bg">
+                                                    <div class="rounder-border">
+                                                        <div class="form-title">
+                                                            <h4 class="form-title-header text-center">
+                                                                    Paths' Table
+                                                            </h4>
+                                                        </div>
                                                 <?php
                                                     if(getNumberOfPaths($connection) > 0){
                                                         //paths table to go here
                                                     }else{
-                                                        echo '  <div class="well">
+                                                        echo '  <div class="well add-margin">
                                                                     <p class="text-info text-center"><b>Table is empty</b></p>
                                                                 </div>';
                                                     }
                                                 ?>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

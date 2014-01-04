@@ -111,7 +111,7 @@ div.gray-bg {
 }
 
 .form-title-header {
-    margin: 0px 0px 0px 36%;
+    margin: 0px 0px 0px 0.1%;
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -150,6 +150,12 @@ div#submit-msg-container {
 
 p {
     margin: 0px;
+}
+
+.add-margin {
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 label.error {
