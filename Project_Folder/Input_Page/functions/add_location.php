@@ -5,9 +5,41 @@
    require './db_connect.php';
     
     //image data variables
-    if(isset($_FILES['location-image']) && isset($_FILES['location-image'])){
+    if(isset($_FILES['location-image']) && !empty($_FILES['location-image'])){
         $image_name = $_FILES['location-image']['name'];
+        $image_size = $_FILES['location-image']['size'];
+        $image_type = $_FILES['location-image']['type'];
         $temp_location = $_FILES['location-image']['tmp_name'];
+        
+        //image validation
+        $image_file_info = basename($image_name);
+        
+        //image size must be less than 5mb
+        if($image_size > 5242880){
+            $response_array_1 = array("status" => "image_large",
+                                      "message" => '<div id="message-box-error" class="message-box">
+                                                    <a class="close fade-out">×</a>
+                                                    <p class="text-center">
+                                                        <strong>Image Error!</strong> The image file is too larege.
+                                                    </p>
+                                                   </div>');
+            
+            die(json_encode($response_array_1));
+        }else{
+            //checking if the image file is a jpg or jpeg or png
+            $ext = strtolower(substr($image_file_info, strrpos($image_file_info,'.')+1));
+            
+            if(!(($ext == "jpg" || $ext == "jpeg" || $ext == "png") && ($image_type == "image/jpeg" || $image_type == "image/png"))){
+                $response_array_2 = array( "status" => "invalid_file_type",
+                                           "message" => '<div id="message-box-error" class="message-box">
+                                                            <a class="close fade-out">×</a>
+                                                            <p class="text-center">
+                                                                <strong>Image Error!</strong> invalid file type.
+                                                            </p>
+                                                         </div>');
+                die(json_encode($response_array_2));
+            }
+        }
     }
     
     $image_location = "../uploads/locations/";
@@ -49,27 +81,33 @@
             $insert_query_results = mysqli_query($connection, $insert_query);
             
             if($insert_query_results){
-               echo '<div id="message-box-success" class="message-box">
-                        <a class="close fade-out">×</a>
-                        <p class="text-center">
-                            <strong>Successful!</strong> The location <b>'.$locationName.'</b> was successfully added.
-                        </p>
-                     </div>';
+                $response_array_3 = array("status" => "success",
+                                          "message" => '<div id="message-box-success" class="message-box">
+                                                            <a class="close fade-out">×</a>
+                                                            <p class="text-center">
+                                                                <strong>Successful!</strong> The location <b>'.$locationName.'</b> was successfully added.
+                                                            </p>
+                                                         </div>');
+               echo json_encode($response_array_3);
             }else{
-               echo '<div id="message-box-error" class="message-box">
-                        <a class="close fade-out">×</a>
-                        <p class="text-center"
-                            <strong>Insertion Error!</strong> The Location<b> '.$locationName.'</b> already exists
-                        </p>
-                     </div>';
+                $response_array_4 = array("status" => "insert_error",
+                                          "message" => '<div id="message-box-error" class="message-box">
+                                                            <a class="close fade-out">×</a>
+                                                            <p class="text-center"
+                                                                <strong>Insertion Error!</strong> The Location<b> '.$locationName.'</b> already exists.
+                                                            </p>
+                                                         </div>');
+               echo json_encode($response_array_4);
             }
             
         }else{
-           echo '<div id="message-box-empty-values" class="message-box">
-                    <a class="close fade-out">×</a>
-                    <p class="text-center">
-                        <strong>Insertion Error!</strong> Some required fields are not set.
-                    </p>
-                 </div>';
+            $response_array_5 = array("status" => "empty_values",
+                                      "message" => '<div id="message-box-empty-values" class="message-box">
+                                                        <a class="close fade-out">×</a>
+                                                        <p class="text-center">
+                                                            <strong>Insertion Error!</strong> Some required fields are not set.
+                                                        </p>
+                                                     </div>');
+           echo json_encode($response_array_5);
         }
     }
