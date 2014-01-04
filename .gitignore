@@ -1,4 +1,4 @@
-#################
+################
 ## Eclipse
 #################
 
@@ -215,4 +215,7 @@ pip-log.txt
 .mr.developer.cfg
 
 #Netbeans Project Private.xml
+private/
 private.xml
+project.properties
+project.xml
