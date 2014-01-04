@@ -75,11 +75,15 @@
                 url: "../functions/add_location.php",
                 data: formdata,
                 success: function(data, textStatus, jqXHR) {
-                $("div#add-location-msg-content").html(data)
-                        .hide()
-                        .fadeIn('slow')
-                        .delay(3000)
-                        .fadeOut("slow");
+                    $("div#add-location-msg-content").html(data)
+                            .hide()
+                            .fadeIn('slow')
+                            .delay(3000)
+                            .fadeOut("slow");
+                    
+                    //clear from fields
+                    $("form#add-location-form")[0].reset();
+                
             }
             });
         });
