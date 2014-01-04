@@ -138,7 +138,7 @@
                                             <input id="location-name" class="input-xxlarge" name="location-name" type="text" placeholder="location name" required="true"/>
                                             <label class="error" id="location-name-error" for="location-name">
                                                 <span class="text-error">*</span>
-                                                <strong>This field must be field in</strong>
+                                                <strong>This field must be filled in</strong>
                                             </label>
 
                                             <label class="label-style" for="location-prefix" >Prefix of the location name :</label>
@@ -172,7 +172,7 @@
                                             <input id="image-x-coordinate" class="input-xxlarge" name="X-coordinate" type="text" placeholder="X-coordinate of location on image" required="true"/>
                                             <label class="error" id="image-x-coordinate-error" for="image-x-coordinate">
                                                 <span class="text-error">*</span>
-                                                <strong>This field must be field in</strong>
+                                                <strong>This field must be filled in</strong>
                                             </label>
                                             
                                             <label class="label-style" for="image-Y-coordinate">Y-coordinate of the location on the map :</label>
@@ -184,7 +184,7 @@
                                             <input id="image-Y-coordinate" class="input-xxlarge" name="Y-coordinate" type="text" placeholder="Y-coordinate of location on image" required="true"/>
                                             <label class="error" id="image-Y-coordinate-error" for="image-Y-coordinate">
                                                 <span class="text-error">*</span>
-                                                <strong>This field must be field in</strong>
+                                                <strong>This field must be filled in</strong>
                                             </label>
                                             
                                             <label class="label-style" for="gps-latitude">GPS latitude:</label>
@@ -196,7 +196,7 @@
                                             <input id="gps-latitude" class="input-xxlarge" name="gps-latitude" type="text" placeholder="GPS latitude coordinate of location" required="true"/>
                                             <label class="error" id="gps-latitude-error" for="gps-latitude">
                                                 <span class="text-error">*</span>
-                                                <strong>This field must be field in</strong>
+                                                <strong>This field must be filled in</strong>
                                             </label>
                                             
                                             <label class="label-style" for="gps-longitude">GPS longitude:</label>
@@ -208,7 +208,7 @@
                                             <input id="gps-longitude" class="input-xxlarge" name="gps-longitude" type="text" placeholder="GPS longitude coordinate of location" required="true"/>
                                             <label class="error" id="gps-longitude-error" for="gps-longitude">
                                                 <span class="text-error">*</span>
-                                                <strong>This field must be field in</strong>
+                                                <strong>This field must be filled in</strong>
                                             </label>
                                             
                                             <label class="label-style" for="location-image">Image of the location :</label>
