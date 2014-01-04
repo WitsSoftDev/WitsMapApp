@@ -16,23 +16,29 @@ if(isset($_FILES['image-location-url']) && !empty($_FILES['image-location-url'])
         
         //image size must be less than 5mb
         if($map_image_size > 5242880){
-            die('<div id="message-box-error" class="message-box">
-                        <a class="close fade-out">×</a>
-                        <p class="text-center">
-                            <strong>Image Error!</strong> The image file is too larege.
-                        </p>
-                     </div>');
+            $map_query_response_array_1 = array("status" => "image_large",
+                                          "message" => '<div id="message-box-error" class="message-box">
+                                                            <a class="close fade-out">×</a>
+                                                            <p class="text-center">
+                                                                <strong>Image Error!</strong> The image file is too larege.
+                                                            </p>
+                                                         </div>');
+            
+            die(json_encode($map_query_response_array_1));
         }else{
             //checking if the image file is a jpg or jpeg or png
             $ext = strtolower(substr($image_file_info, strrpos($image_file_info,'.')+1));
             
             if(!(($ext == "jpg" || $ext == "jpeg" || $ext == "png") && ($map_image_type == "image/jpeg" || $map_image_type == "image/png"))){
-                die('<div id="message-box-error" class="message-box">
-                        <a class="close fade-out">×</a>
-                        <p class="text-center">
-                            <strong>Image Error!</strong> invalid file type.
-                        </p>
-                     </div>');
+                $map_query_response_array_2 = array( "status" => "invalid_file_type",
+                                           "message" => '<div id="message-box-error" class="message-box">
+                                                            <a class="close fade-out">×</a>
+                                                            <p class="text-center">
+                                                                <strong>Image Error!</strong> invalid file type.
+                                                            </p>
+                                                         </div>');
+                
+                die(json_encode($map_query_response_array_2));
             }
         }
 }
@@ -82,26 +88,34 @@ if(isset($_FILES['image-location-url']) && !empty($_FILES['image-location-url'])
         $add_map_query_results = mysqli_query($connection, $add_map_query);
 
         if($add_map_query_results){
-            echo '<div class="message-box">
-                     <a class="close fade-out">×</a>
-                     <p class="text-center">
-                        <strong>Successful!</strong> The map was successfully added.
-                     </p>
-                  </div>';
+            $map_query_response_array_3 = array("status" => "success",
+                                                 "message" => '<div class="message-box">
+                                                                    <a class="close fade-out">×</a>
+                                                                    <p class="text-center">
+                                                                       <strong>Successful!</strong> The map was successfully added.
+                                                                    </p>
+                                                                 </div>');
+            
+            echo json_encode($map_query_response_array_3);
         }else {
-            echo '<div class="message-box">
-                     <a class="close fade-out">×</a>
-                     <p class="text-center">
-                        <strong>Insertion Error!</strong> The insertion was not sucessful.
-                     </p>
-                  </div>';
+            $map_query_response_array_4 = array("status" => "inser_error",
+                                                "message" => '<div class="message-box">
+                                                                    <a class="close fade-out">×</a>
+                                                                    <p class="text-center">
+                                                                       <strong>Insertion Error!</strong> The insertion was not sucessful.
+                                                                    </p>
+                                                                 </div>');
+            
+            echo json_encode($map_query_response_array_4);
         }
      }else{
-         echo '<div class="message-box">
-                 <a class="close fade-out">×</a>
-                 <p class="text-center">
-                    <strong>Insertion Error!</strong> some required fileds are not set.
-                 </p>
-              </div>';
+         $map_query_response_array_5 = array("status" => "empty_values",
+                                             "message" => '<div class="message-box">
+                                                                <a class="close fade-out">×</a>
+                                                                <p class="text-center">
+                                                                   <strong>Insertion Error!</strong> some required fileds are not set.
+                                                                </p>
+                                                             </div>');
+         echo json_encode($map_query_response_array_5);
      }
     }
