@@ -15,19 +15,25 @@ if(isset($_POST['LocationID']) && isset($_POST['LocationName'])){
         $delete_query_results = mysqli_query($connection, $delete_query);
         
         if($delete_query_results){
-            echo '<div id="message-box-error" class="message-box">
-                        <a class="close fade-out">×</a>
-                        <p class="text-center">
-                            The location <strong>'.$locationName.'</strong> has been deleted.
-                        </p>
-                     </div>';
+            $response_array = array("status" => "success",
+                                    "message" => '<div id="message-box-error" class="message-box">
+                                                    <a class="close fade-out">×</a>
+                                                    <p class="text-center">
+                                                        The location <strong>'.$locationName.'</strong> has been deleted.
+                                                    </p>
+                                                 </div>');
+            
+            echo json_encode($response_array);
         }else{
-            echo '<div id="message-box-error" class="message-box">
+            $response_array = array("status" => "success",
+                "message" => '<div id="message-box-error" class="message-box">
                         <a class="close fade-out">×</a>
                         <p class="text-center">
                             <strong>Error:</strong> The location <strong>'.$locationName.'</strong> could not be deleted.
                         </p>
-                     </div>';
+                     </div>');
+            
+            echo json_encode($response_array);
         }
     }
 }

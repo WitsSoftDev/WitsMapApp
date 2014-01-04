@@ -74,7 +74,7 @@
                             <i class="icon-map-marker"></i>
                             Locations
                    </span>
-                   <input class="input-mini reduce-width uneditable-input" type="text" placeholder="<?php echo getNumberOfLocations($connection_link); ?>" />
+                   <input id="locations-count" class="input-mini reduce-width uneditable-input" type="text" value="<?php echo getNumberOfLocations($connection_link); ?>" />
                </div>
 
                <div id="num-of-maps" class="input-prepend padding-left-separator" rel="tooltip" data-placement="bottom" title="Current number of maps">
@@ -82,7 +82,7 @@
                             <i class="icon-screenshot"></i>
                             Maps
                    </span>
-                   <input class="input-mini reduce-width uneditable-input" type="text" placeholder="<?php echo getNumberOfMaps($connection_link);?>" />
+                   <input id="maps-count" class="input-mini reduce-width uneditable-input" type="text" value="<?php echo getNumberOfMaps($connection_link);?>" />
                </div>
            </div>
        </div>
