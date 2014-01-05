@@ -16,10 +16,7 @@
                  
             }
 
-            .map {
-                overflow: hidden;
-                position: relative;
-            }
+            
 
             .draggable {
                 
@@ -28,35 +25,43 @@
             #draggable {
                 
             }
+
+            #map-image {
+                max-width: 100%;
+                max-height: 100%;
+            }
         </style>
 
         <title>Path Creator</title>
     </head>
     <body>
+        <script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery.min.js"></script>
+        <script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../Project_Folder/Input_Page/bootstrap/js/bootstrap.min.js"></script>
+        
+        <!--Custom javascript-->
+        <!--When complete all javascript will happen on a specific action, since it will be connected to everything else. The parts which call functions must
+            be replaced by action events calling those functions-->
+
         <script>
-            function DisplayMap(mapLoc) {
-                
-                //document.getElementById("PathCreator").innerHTML = '<center><iframe class="map" src="' + mapLoc + '" seamless><p>Your browser does not support iframes. <br/>Please Change To a More Enlightened Browser.</p></iframe></center>';
-            }
-
             // Make sure it always starts @ zero position for below calcs to work
-            $("#my-image").css({ top: 0, left: 0 });
+            $("#map-image").css({ top: 0, left: 0 });
 
-            var maskWidth = $("#my-mask").width();
-            var maskHeight = $("#my-mask").height();
-            var imgPos = $("#my-image").offset();
-            var imgWidth = $("#my-image").width();
-            var imgHeight = $("#my-image").height();
+            var maskWidth = $("#map-mask").width();
+            var maskHeight = $("#map-mask").height();
+            var imgPos = $("#map-image").offset();
+            var imgWidth = $("#map-image").width();
+            var imgHeight = $("#map-image").height();
 
             var x1 = (imgPos.left + maskWidth) - imgWidth;
             var y1 = (imgPos.top + maskHeight) - imgHeight;
             var x2 = imgPos.left;
             var y2 = imgPos.top;
 
-            $("#my-image").draggable({ containment: [x1, y1, x2, y2] });
-            $("#my-image").css({ cursor: 'move' });
+            $("#map-image").draggable({ containment: [x1, y1, x2, y2] });
+            $("#map-image").css({ cursor: 'move' });
 
-            $(this).draggable({
+            $("#map-image").draggable({
                 drag: function (event, ui) {
                     if (ui.position.top > 0) {
                         ui.position.top = 0;
@@ -75,8 +80,17 @@
                 }
             });
 
+            function DisplayMap(mapLoc) {
 
-            
+                document.getElementById("PathCreator").innerHTML = ''
+                    + '<div id="map-mask" style="width: 600px; height: 400px; overflow: hidden;">' +
+                    '<iframe id="map-image" class="ui-draggable" src="' + mapLoc + '" width="500" height="500"/>' +
+                    '</div>';
+                    
+            }
+
+
+
         </script>
         <!-- perhaps use javascript html5 canvas tags to draw image -->
         <div class="PathCreator">
@@ -86,21 +100,9 @@
                 </script>
             </div> 
         </div>
-        <div>
-        <div id="my-mask" style="width: 200px; height: 200px; overflow: hidden;">
-           <img id="my-image" src="map.jpg" width="1000" height="1000"/>
-        </div>
-        </div>
         
         <!-- JavaScript -->
         
-        <script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery.min.js"></script>
-        <script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="../../Project_Folder/Input_Page/bootstrap/js/bootstrap.min.js"></script>
         
-        <!-- Custom javascript-->
-        <!--When complete all javascript will happen on a specific action, since it will be connected to everything else. The parts which call functions must
-            be replaced by action events calling those functions-->
-
     </body>
 </html>
