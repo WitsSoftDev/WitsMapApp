@@ -1,0 +1,8 @@
+# .travis.yml
+before_script:
+  - "./Project_Folder/DatabaseScript_Src/Create_wits_map_app_db.sql"
+language: php
+php:
+  - "5.5"
+  - "5.4"
+  - "5.3"
