@@ -8,24 +8,6 @@
         <!--Include in main stylesheet when the component is merged into the main project-->
     
         <style>
-            .PathCreator {
-                
-            }
-
-            #PathCreator {
-                 
-            }
-
-            
-
-            .draggable {
-                
-            }
-
-            #draggable {
-                
-            }
-
             #map-image {
                 max-width: 100%;
                 max-height: 100%;
@@ -33,76 +15,58 @@
         </style>
 
         <title>Path Creator</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	
+	    <style type="text/css">
+		    img {
+			    display: block;
+		    }
+	    </style>
     </head>
     <body>
-        <script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery.min.js"></script>
-        <script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="../../Project_Folder/Input_Page/bootstrap/js/bootstrap.min.js"></script>
-        
         <!--Custom javascript-->
         <!--When complete all javascript will happen on a specific action, since it will be connected to everything else. The parts which call functions must
             be replaced by action events calling those functions-->
 
         <script>
-            // Make sure it always starts @ zero position for below calcs to work
-            $("#map-image").css({ top: 0, left: 0 });
-
-            var maskWidth = $("#map-mask").width();
-            var maskHeight = $("#map-mask").height();
-            var imgPos = $("#map-image").offset();
-            var imgWidth = $("#map-image").width();
-            var imgHeight = $("#map-image").height();
-
-            var x1 = (imgPos.left + maskWidth) - imgWidth;
-            var y1 = (imgPos.top + maskHeight) - imgHeight;
-            var x2 = imgPos.left;
-            var y2 = imgPos.top;
-
-            $("#map-image").draggable({ containment: [x1, y1, x2, y2] });
-            $("#map-image").css({ cursor: 'move' });
-
-            $("#map-image").draggable({
-                drag: function (event, ui) {
-                    if (ui.position.top > 0) {
-                        ui.position.top = 0;
-                    }
-                    var maxtop = ui.helper.parent().height() - ui.helper.height();
-                    if (ui.position.top < maxtop) {
-                        ui.position.top = maxtop;
-                    }
-                    if (ui.position.left > 0) {
-                        ui.position.left = 0;
-                    }
-                    var maxleft = ui.helper.parent().width() - ui.helper.width();
-                    if (ui.position.left < maxleft) {
-                        ui.position.left = maxleft;
-                    }
-                }
-            });
-
             function DisplayMap(mapLoc) {
 
-                document.getElementById("PathCreator").innerHTML = ''
-                    + '<div id="map-mask" style="width: 600px; height: 400px; overflow: hidden;">' +
-                    '<iframe id="map-image" class="ui-draggable" src="' + mapLoc + '" width="500" height="500"/>' +
+                document.getElementById("PathCreator").innerHTML = 
+                    '<div class="zoomable"> ' +
+                    '<img src="' + mapLoc + '">' +
                     '</div>';
                     
             }
 
-
-
         </script>
+
         <!-- perhaps use javascript html5 canvas tags to draw image -->
-        <div class="PathCreator">
-            <div id="PathCreator">
-                <script>
-                    DisplayMap("map.jpg");
-                </script>
-            </div> 
+        <div class="PathCreator" id="PathCreator">
+            <script>
+                DisplayMap("map.jpg");
+            </script>
         </div>
         
         <!-- JavaScript -->
+        <!--script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery.min.js"></script-->
+        <!--script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery-ui.min.js"></script-->
+        <!--TODO Update jquery throughout project-->
+        <script type="text/javascript" src="../../Project_Folder/Input_Page/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://raw.github.com/EightMedia/hammer.js/master/dist/hammer.js"></script>
+		<script type="text/javascript" src="https://raw.github.com/EightMedia/hammer.js/master/dist/jquery.hammer.js"></script>
+		<script type="text/javascript" src="https://raw.github.com/brandonaaron/jquery-mousewheel/master/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="Scripts/jquery.imagezoom.min.js"></script>
         
-        
+        <script type="text/javascript">
+            ; (function ($) {
+                $(function () {
+                    var isMobile = navigator.userAgent.match(/Mobile/i) != null;
+                    $("img").imageZoom({ disableHammer: !isMobile });
+                    $(".zoomable").imageZoom({ disableHammer: !isMobile });
+                });
+            })(jQuery);
+        </script>
     </body>
 </html>
