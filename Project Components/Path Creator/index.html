@@ -6,11 +6,32 @@
     
         <!--Custom stylesheet-->
         <!--Include in main stylesheet when the component is merged into the main project-->
-    
+        <!--TODO JMC
+            1. Update jquery throughout project
+            2. Allow for different UI modes
+                a. one for map viewing
+                b. one for creating locations
+                c. one for creating paths
+            3. Create the ability to zoom to a point on an area within map and then open new map image
+            when applicable. ie if there is a map for a location within the map
+            -->
+
         <style>
-            #map-image {
+            #PathCreator {
+                 max-width: 100%;
+                 max-height: 100%;
+             }
+            .PathCreator {
                 max-width: 100%;
                 max-height: 100%;
+            }
+            img {
+			    display: block;
+		    }
+            .mapImage {
+                width: 800px; 
+                border: 4px black; 
+                padding: 10px;
             }
         </style>
 
@@ -19,10 +40,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	
 	    <style type="text/css">
-		    img {
-			    display: block;
-		    }
-	    </style>
+    	    img {
+    	        display: block;
+    	    }
+    	</style>
     </head>
     <body>
         <!--Custom javascript-->
@@ -31,16 +52,17 @@
 
         <script>
             function DisplayMap(mapLoc) {
-
                 document.getElementById("PathCreator").innerHTML = 
-                    '<div class="zoomable"> ' +
-                    '<img src="' + mapLoc + '">' +
+                    '<div class="mapImage"' +
+                        '<div class="zoomable"> ' +
+                            '<img src="' + mapLoc + '">' +
+                        '</div>' +
                     '</div>';
-                    
             }
 
         </script>
-
+        
+        <!--Actual Site initiation-->
         <!-- perhaps use javascript html5 canvas tags to draw image -->
         <div class="PathCreator" id="PathCreator">
             <script>
@@ -51,7 +73,6 @@
         <!-- JavaScript -->
         <!--script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery.min.js"></script-->
         <!--script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery-ui.min.js"></script-->
-        <!--TODO Update jquery throughout project-->
         <script type="text/javascript" src="../../Project_Folder/Input_Page/bootstrap/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script type="text/javascript" src="https://raw.github.com/EightMedia/hammer.js/master/dist/hammer.js"></script>
@@ -59,6 +80,7 @@
 		<script type="text/javascript" src="https://raw.github.com/brandonaaron/jquery-mousewheel/master/jquery.mousewheel.js"></script>
 		<script type="text/javascript" src="Scripts/jquery.imagezoom.min.js"></script>
         
+        <!--This coe is kept because it can be used for a mobile api site thingy-->
         <script type="text/javascript">
             ; (function ($) {
                 $(function () {
