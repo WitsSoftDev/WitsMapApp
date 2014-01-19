@@ -49,3 +49,9 @@ libraries and other files found in his project's src.
 Some of his custom code and phonegap improvemnts may be found in these files
 which have been edited for his project.
 
+License
+=======
+
+The Wits Map App uses the MIT license.
+Phonegap Uses the Apache License
+
