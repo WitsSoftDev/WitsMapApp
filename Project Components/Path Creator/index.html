@@ -10,8 +10,14 @@
             1. Update jquery throughout project
             2. Allow for different UI modes
                 a. one for map viewing
+                    Get info from api/server and plot points ect on image
+                    also draw paths
                 b. one for creating locations
+                    take the x/y and send back to api/server
+                    create overlay point on map
                 c. one for creating paths
+                    draw paths overlay
+                    create adjaceny list to send back to api/server
             3. Create the ability to zoom to a point on an area within map and then open new map image
             when applicable. ie if there is a map for a location within the map
             -->
@@ -49,13 +55,23 @@
         <!--Custom javascript-->
         <!--When complete all javascript will happen on a specific action, since it will be connected to everything else. The parts which call functions must
             be replaced by action events calling those functions-->
-
         <script>
+            function point_it(event) {
+                pos_x = event.offsetX ? (event.offsetX) : event.pageX - document.getElementById("pointer_div").offsetLeft;
+                pos_y = event.offsetY ? (event.offsetY) : event.pageY - document.getElementById("pointer_div").offsetTop;
+                document.getElementById("cross").style.left = (pos_x - 1);
+                document.getElementById("cross").style.top = (pos_y - 15);
+                document.getElementById("cross").style.visibility = "visible";
+                document.pointform.form_x.value = pos_x;
+                document.pointform.form_y.value = pos_y;
+            }
+
             function DisplayMap(mapLoc) {
                 document.getElementById("PathCreator").innerHTML = 
-                    '<div class="mapImage"' +
+                    '<div class="mapImage" id="pointer_div" onclick="point_it(event)"' +
                         '<div class="zoomable"> ' +
-                            '<img src="' + mapLoc + '">' +
+                            '<img src="' + mapLoc + '" style="position:relative;">' + 
+                            '<img src="point.png" id="cross" style="position:absolute;visibility:hidden;z-index:2;max-width: 15%;">' +
                         '</div>' +
                     '</div>';
             }
@@ -69,6 +85,10 @@
                 DisplayMap("map.jpg");
             </script>
         </div>
+        
+        <form name="pointform" method="post">
+            You pointed on x = <input type="text" name="form_x" size="4" /> - y = <input type="text" name="form_y" size="4" />
+        </form>     
         
         <!-- JavaScript -->
         <!--script type="text/javascript" src ="../../Project_Folder/Input_Page/scripts/plugins/jquery.min.js"></script-->
