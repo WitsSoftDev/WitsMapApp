@@ -4,15 +4,27 @@ WitsSoftDev13
 This is the University of the Witwatersrand's Software Development Student groups's 2013 (and perhaps going into 2014) 
 project to build a mobile application for Wits Marketing. 
 This app will allow the user to select on a map where they would like to go and from their current position to their 
-destination it will calculate and display the shortest path.
+destination it will calculate and display the shortest path using the Google API.
+It will also display information about the campus they are on and the building they are going to.
+Both a description and an image respectively. More images may be added later.
 
 Basic Concept
 =============
 
 Wits marketing has asked us to create a mobile application which will allow the user to select on a map where they would like to go and from their current position to their destination, then it will calculate the shortest path and display it to the user.
+The Google Developer Student Group at Wits has recently mapped out Wits on Google maps, so the maps api will be used instead of building our own.
 
 Standards
 =========
+Design
+------
+The project web pages, which include the admin pages and the mobile app must have the Wits colours, and Logo.
+Blue-Gold and Logo.
+
+API
+---
+The API should follow restful practices. (See design specification docs for more information).
+
 Security Issues
 ---------------
 
