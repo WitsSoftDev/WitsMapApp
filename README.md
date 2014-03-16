@@ -1,3 +1,9 @@
+OldCode_Depreciated
+===================
+This branch contain all the old code from the project.
+The project's scope has since changed, but this code will stay here for
+archival sake.
+
 WitsSoftDev13
 =============
 
