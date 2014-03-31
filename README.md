@@ -29,8 +29,8 @@ The RESTful API standard used follows apigee’s ebook: “Web API Design: Crafting 
 
 PROJECT TEAM
 ------------
-Jason Chalom (@TRex22)
-Isaac Seshoka (@ick-seshoka)
+	Jason Chalom (@TRex22)
+	Isaac Seshoka (@ick-seshoka)
 
 Deliverables
 ============
