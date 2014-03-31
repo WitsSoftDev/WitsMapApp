@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2013 at 08:24 AM
--- Server version: 5.5.32
--- PHP Version: 5.4.16
+-- Generation Time: Mar 31, 2014 at 04:53 AM
+-- Server version: 5.6.14
+-- PHP Version: 5.5.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,95 +19,54 @@ SET time_zone = "+00:00";
 --
 -- Database: `wits_map_app_db`
 --
-CREATE DATABASE IF NOT EXISTS `wits_map_app_db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `wits_map_app_db`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `locationdata`
---
--- Creation: Nov 26, 2013 at 12:35 PM
+-- Table structure for table `building`
 --
 
-CREATE TABLE IF NOT EXISTS `locationdata` (
-  `LocationID` int(11) NOT NULL AUTO_INCREMENT,
-  `TypeOfPoint` char(25) NOT NULL,
-  `MapID` int(11) NOT NULL,
-  `ImageCoordinateX` int(11) NOT NULL,
-  `ImageCoordinateY` int(11) NOT NULL,
-  `GPSLatitude` double NOT NULL,
-  `GPSLongitude` double NOT NULL,
-  `LocationInfo` mediumtext,
-  `ImageOfLocation` mediumtext,
-  `LocationName` char(100) DEFAULT NULL,
-  `LocationPrefix` char(10) DEFAULT NULL,
-  PRIMARY KEY (`LocationID`),
-  KEY `LocationID` (`LocationID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- RELATIONS FOR TABLE `locationdata`:
---   `MapID`
---       `map` -> `MapID`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `map`
---
--- Creation: Nov 26, 2013 at 11:48 AM
---
-
-CREATE TABLE IF NOT EXISTS `map` (
-  `MapID` int(11) NOT NULL AUTO_INCREMENT,
-  `ImgLocation` longtext NOT NULL,
-  `Corner1GPSLatitude` double NOT NULL,
-  `Corner1GPSLongitude` double NOT NULL,
-  `Corner2GPSLatitude` double NOT NULL,
-  `Corner2GPSLongitude` double NOT NULL,
-  `Corner3GPSLatitude` double NOT NULL,
-  `Corner3GPSLongitude` double NOT NULL,
-  `Corner4GPSLatitude` double NOT NULL,
-  `Corner4GPSLongitude` double NOT NULL,
-  PRIMARY KEY (`MapID`),
-  KEY `MapID` (`MapID`)
+CREATE TABLE IF NOT EXISTS `building` (
+  `BuildingID` int(11) NOT NULL AUTO_INCREMENT,
+  `CampusID` int(11) NOT NULL,
+  `GPSLat` double NOT NULL,
+  `GPSLong` double NOT NULL,
+  `Description` varchar(255) DEFAULT NULL,
+  `ImageLocation` varchar(255) DEFAULT NULL,
+  `BuildingAbbreviations` varchar(255) NOT NULL,
+  PRIMARY KEY (`BuildingID`),
+  KEY `CampusID` (`CampusID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `path`
---
--- Creation: Nov 26, 2013 at 12:06 PM
+-- Table structure for table `campus`
 --
 
-CREATE TABLE IF NOT EXISTS `path` (
-  `PathID` int(11) NOT NULL AUTO_INCREMENT,
-  `CurrentNode` int(11) NOT NULL,
-  `PreviousNode` int(11) NOT NULL,
-  PRIMARY KEY (`PathID`)
+CREATE TABLE IF NOT EXISTS `campus` (
+  `CampusID` int(11) NOT NULL AUTO_INCREMENT,
+  `GPSLat1` double NOT NULL,
+  `GPSLong1` double NOT NULL,
+  `GPSLat2` double NOT NULL,
+  `GPSLong2` double NOT NULL,
+  `GPSLat3` double NOT NULL,
+  `GPSLong3` double NOT NULL,
+  `GPSLat4` double NOT NULL,
+  `GPSLong4` double NOT NULL,
+  `Description` varchar(255) DEFAULT NULL,
+  `ImageLocation` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`CampusID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- RELATIONS FOR TABLE `path`:
---   `CurrentNode`
---       `locationdata` -> `LocationID`
---   `PreviousNode`
---       `locationdata` -> `LocationID`
---
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
---
--- Creation: Nov 26, 2013 at 11:15 AM
+-- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
-  `UserID` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `user` (
+  `UserID` int(20) NOT NULL AUTO_INCREMENT,
   `UserName` varchar(30) NOT NULL,
   `UserPassword` varchar(32) NOT NULL,
   `UserEmailAddress` varchar(30) NOT NULL,
@@ -117,12 +76,22 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `users` (`UserID`, `UserName`, `UserPassword`, `UserEmailAddress`) VALUES
+INSERT INTO `user` (`UserID`, `UserName`, `UserPassword`, `UserEmailAddress`) VALUES
 (1, 'ick_seshoka', '32250170a0dca92d53ec9624f336ca24', 'ick.seshoka@gmail.com'),
 (2, 'jason', '73a054cc528f91ca1bbdda3589b6a22d', 'jasonchalom@yahoo.co.uk');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `building`
+--
+ALTER TABLE `building`
+  ADD CONSTRAINT `building_ibfk_1` FOREIGN KEY (`CampusID`) REFERENCES `campus` (`CampusID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
