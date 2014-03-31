@@ -3,84 +3,218 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>WitsSoftdev13 by The Wits SoftDev Team 2013</title>
+    <title>WitsSoftdev13 by TRex22</title>
   </head>
 
   <body>
+
     <header>
-      <div class="inner">
+      <div class="container">
         <h1>WitsSoftdev13</h1>
-        <h2>This is the University of the Witwatersrand's Software Development Student groups's 2013 project.</h2>
-        <a href="https://github.com/TRex22/WitsSoftDev13" class="button"><small>View project on</small>GitHub</a>
+        <h2>This is the University of the Witwatersrand&#39;s Software Development Student groups&#39;s 2013 project.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/TRex22/WitsSoftDev13/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/TRex22/WitsSoftDev13/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/TRex22/WitsSoftDev13" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
       </div>
     </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <div class="container">
+      <section id="main_content">
+        <h1>
 <a name="witssoftdev13" class="anchor" href="#witssoftdev13"><span class="octicon octicon-link"></span></a>WitsSoftDev13</h1>
 
-<p>This is the University of the Witwatersrand's Software Development Student groups's 2013 (and perhaps going into 2014) 
-project to build a mobile application for Wits Marketing. 
-This app will allow the user to select on a map where they would like to go and from their current position to their 
-destination it will calculate and display the shortest path.</p>
+<h2>
+<a name="project-overview" class="anchor" href="#project-overview"><span class="octicon octicon-link"></span></a>PROJECT OVERVIEW</h2>
+
+<p>This is the University of the Witwatersrand's Software Development Student group’s 2013 (and perhaps going into 2014) project to build a mobile application for Wits Marketing. 
+This app will allow the user to select on a map where they would like to go and from their current position to their destination it will calculate and display the shortest path using the Google API.
+It will also display information about the campus they are on and the building they are going to. Both a description and an image will be displayed respectively. The ability to display more images may be added later.</p>
+
+<h2>
+<a name="project-objectives" class="anchor" href="#project-objectives"><span class="octicon octicon-link"></span></a>PROJECT OBJECTIVES</h2>
+
+<ol>
+<li>Create server to support the input of custom data such as campus locations, descriptions and images.</li>
+<li>Have a database to store information</li>
+<li>Have the input system be user password protected from unauthorized access</li>
+<li>Have a functional and well-built mobile app based on the Phonegap framework and JavaScript libraries</li>
+</ol><h2>
+<a name="success-criteria" class="anchor" href="#success-criteria"><span class="octicon octicon-link"></span></a>SUCCESS CRITERIA</h2>
+
+<ol>
+<li>A functional system which can tell where the user is from their mobile device</li>
+<li>Have a store of data about locations on campuses</li>
+<li>Ability to draw paths to locations, perhaps even have dynamically updateable paths.</li>
+<li>Have a server side administration web-app which is functional.</li>
+<li>All user interfaces have Wits colours and logo.</li>
+</ol><h2>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+
+<p>The API follows a RESTful practices.
+The RESTful API standard used follows apigee’s ebook: “Web API Design: Crafting Interfaces that Developers Love”.</p>
+
+<h2>
+<a name="project-team" class="anchor" href="#project-team"><span class="octicon octicon-link"></span></a>PROJECT TEAM</h2>
+
+<p>Jason Chalom (<a href="https://github.com/TRex22" class="user-mention">@TRex22</a>)</p>
+
+<p>Isaac Seshoka (<a href="https://github.com/ick-seshoka" class="user-mention">@ick-seshoka</a>)</p>
 
 <h1>
-<a name="basic-concept" class="anchor" href="#basic-concept"><span class="octicon octicon-link"></span></a>Basic Concept</h1>
+<a name="deliverables" class="anchor" href="#deliverables"><span class="octicon octicon-link"></span></a>Deliverables</h1>
 
-<p>Wits marketing has asked us to create a mobile application which will allow the user to select on a map where they would like to go and from their current position to their destination, then it will calculate the shortest path and display it to the user.</p>
+<h2>
+<a name="database" class="anchor" href="#database"><span class="octicon octicon-link"></span></a>Database</h2>
+
+<h2>
+<a name="userstbl" class="anchor" href="#userstbl"><span class="octicon octicon-link"></span></a>UsersTbl</h2>
+
+<pre><code>UserId (Primary Key) Autonumber
+Username (String)
+PasswordHash (String)
+Email (String)
+</code></pre>
+
+<h2>
+<a name="campustbl" class="anchor" href="#campustbl"><span class="octicon octicon-link"></span></a>CampusTbl</h2>
+
+<pre><code>CampusID (Primary Key) Autonumber
+GPSLat1 (String)
+GPSLong1 (String)
+GPSLat2 (String)
+GPSLong2 (String)
+GPSLat3 (String)
+GPSLong3 (String)
+GPSLat4 (String)
+GPSLong4 (String)
+Description (String)
+ImageLocation (String)
+</code></pre>
+
+<h2>
+<a name="buildingstbl" class="anchor" href="#buildingstbl"><span class="octicon octicon-link"></span></a>BuildingsTbl</h2>
+
+<pre><code>BuildingID (String)
+CampusID (Foreign Key from Campus table)
+GPSLat (String)
+GPSLong (String)
+Description (String)
+ImageLocation (String)
+BuildingAbbreviations (String) There can be a few of them which will then be delimited.
+</code></pre>
+
+<h2>
+<a name="web-pages" class="anchor" href="#web-pages"><span class="octicon octicon-link"></span></a>Web Pages</h2>
+
+<p>All web pages will have a unified theme. (See the SpecificationDesigns.pdf document for all proposed wireframe designs)
+There has to be a navigation bar to navigate to all pages
+Any delete options will display a confirmation dialogue.
+Any input pages which depend on other information in the system will display an error dialogue if that information has not yet been inputted.</p>
+
+<h2>
+<a name="login-page" class="anchor" href="#login-page"><span class="octicon octicon-link"></span></a>Login Page</h2>
+
+<p>The login page will be basic in design. (See the SpecificationDesigns.pdf document)</p>
+
+<h2>
+<a name="first-time-login-page" class="anchor" href="#first-time-login-page"><span class="octicon octicon-link"></span></a>First Time login Page</h2>
+
+<p>There needs to be a page to initially create an administrator account. (See the SpecificationDesigns.pdf document)</p>
+
+<h2>
+<a name="user-administration" class="anchor" href="#user-administration"><span class="octicon octicon-link"></span></a>User Administration</h2>
+
+<p>This page is used to display all users in the system, edit user information and also delete users.</p>
+
+<h2>
+<a name="campus-input-page" class="anchor" href="#campus-input-page"><span class="octicon octicon-link"></span></a>Campus Input Page</h2>
+
+<p>This page is where Campus information is inputted, it will use a Google Maps object to help locate a square which demarcates the campus selected. 
+The user will ‘draw’ a rectangle around the area they wish to demarcate.
+It will upload an image (Maybe multiple) of the campus and also a description of the campus.</p>
+
+<h2>
+<a name="campus-administration" class="anchor" href="#campus-administration"><span class="octicon octicon-link"></span></a>Campus Administration</h2>
+
+<p>This page will display a list of campuses in the system and will be able to delete a campus or edit its information.</p>
+
+<h2>
+<a name="buildings-input-page" class="anchor" href="#buildings-input-page"><span class="octicon octicon-link"></span></a>Buildings Input Page</h2>
+
+<p>This is the page buildings will be inputted onto. There will be a dropdown list of campuses currently in the system to select from. If there is no campus then the page should redirect to the Campus Input page. It will also use a Google Maps object to find the GPS coordinates of the building on the specific campus. By selecting a campus from the dropdown the map will be populated at that campus. The user will then create a point on top of a building to select it. The page will then upload the building information to the database.</p>
+
+<h2>
+<a name="buildings-administration-page" class="anchor" href="#buildings-administration-page"><span class="octicon octicon-link"></span></a>Buildings Administration Page</h2>
+
+<p>This page will display a list of buildings on a specific campus in the system and will be able to delete a campus or edit its information.</p>
+
+<h2>
+<a name="mobile-app" class="anchor" href="#mobile-app"><span class="octicon octicon-link"></span></a>Mobile App</h2>
+
+<p>The mobile app will have three swipe-able pages.</p>
+
+<h2>
+<a name="welcome-page" class="anchor" href="#welcome-page"><span class="octicon octicon-link"></span></a>Welcome Page</h2>
+
+<p>This page will have a campus dropdown menu which when selected will show a building dropdown menu so that the user can select a building which they wish to go to.
+There will also be a search bar so that the user can search using a room number. The API will handle calculating the building from its abbreviation and the floor from the first number. (This will have to be checked in the database design and also the building input page.)
+By clicking a next arrow, swiping left or clicking a button the program will bring up the second page.</p>
+
+<h2>
+<a name="second-page" class="anchor" href="#second-page"><span class="octicon octicon-link"></span></a>Second Page</h2>
+
+<p>The second page will bring up a map, with the current location of the user and their destination drawn for them. It will also plot a course for them to take to get there. (There may need to be a recalculate button to recalculate the path or to have an auto-refresh ability). The Google Directions API could be used. <a href="https://developers.google.com/maps/documentation/directions/">https://developers.google.com/maps/documentation/directions/</a></p>
+
+<h2>
+<a name="third-page" class="anchor" href="#third-page"><span class="octicon octicon-link"></span></a>Third Page</h2>
+
+<p>This page will display the information on the current campus and also the selected building. It will have images of the two and the abbreviations of the building as well. (Some information may already exist in the Google Map).</p>
 
 <h1>
-<a name="standards" class="anchor" href="#standards"><span class="octicon octicon-link"></span></a>Standards</h1>
+<a name="api-design" class="anchor" href="#api-design"><span class="octicon octicon-link"></span></a>API DESIGN</h1>
 
 <h2>
-<a name="security-issues" class="anchor" href="#security-issues"><span class="octicon octicon-link"></span></a>Security Issues</h2>
+<a name="get-campus" class="anchor" href="#get-campus"><span class="octicon octicon-link"></span></a>GET CAMPUS</h2>
+
+<pre><code>~/api/{v1}/campuses/{CampusID}
+</code></pre>
+
+<p>This will return a JSON object of the specific campus its information and the http header.</p>
 
 <h2>
-<a name="html" class="anchor" href="#html"><span class="octicon octicon-link"></span></a>HTML</h2>
+<a name="get-campus-list" class="anchor" href="#get-campus-list"><span class="octicon octicon-link"></span></a>GET CAMPUS LIST</h2>
 
-<p>Cross site scripting is an issue where instead of a user inputting plaintext into a String they instead insert HTML markup to allow the use of scripts such as JavaScript. This security flaw can be overcome by checking every string and using HTML &amp; clause to handle all input as strings. This flaw would only be system local but should still be considered.</p>
+<pre><code>~/api/{v1}/campuses/
+</code></pre>
+
+<p>This will return a JSON list (IEnumerable object) of campuses in the system including the http response header.</p>
 
 <h2>
-<a name="mysql-and-php" class="anchor" href="#mysql-and-php"><span class="octicon octicon-link"></span></a>MySQL and PHP</h2>
+<a name="get-building" class="anchor" href="#get-building"><span class="octicon octicon-link"></span></a>GET BUILDING</h2>
 
-<p>The main issue here is SQL injection. A user instead of entering plaintext may enter SQL statements to cause damage throughout the entire system. There are a few ways to negate this security flaw. One method is to add “” to the end of every string as it goes into the database. A better way would be to scrub the String so that no infected text goes into the database at all.
-Phonegap Updates
-There are a few ways to handle updates to a phonegap app. It has a built in technology  which can be added as an extra, but I don’t like it since it greatly decreases performance.</p>
-        </section>
+<pre><code>~/api/{v1}/buildings/{BuildingID}
+</code></pre>
 
-        <aside id="sidebar">
-          <a href="https://github.com/TRex22/WitsSoftDev13/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/TRex22/WitsSoftDev13/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-          <a href="https://github.com/TRex22/WitsSoftDev13/zipball/MobileApp" class="button">
-            <small>Download</small>
-            MobileApp
-          </a>
+<p>This will return a JSON object of the specific building its information and the http header.</p>
 
-          <p class="repo-owner"><a href="https://github.com/TRex22/WitsSoftDev13"></a> is maintained by <a href="https://github.com/TRex22">TRex22</a> and <a href="https://github.com/ick-seshoka">ick-seshoka</a>.</p>
+<h2>
+<a name="get-buildings-list" class="anchor" href="#get-buildings-list"><span class="octicon octicon-link"></span></a>GET BUILDINGS LIST</h2>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+<pre><code>~/api/{v1}/buildings/
+</code></pre>
+
+<p>This will return a JSON list (IEnumerable object) of buildings in the system including the http response header.</p>
+      </section>
     </div>
 
-  
+    
   </body>
 </html>
