@@ -29,43 +29,43 @@ The RESTful API standard used follows apigee’s ebook: “Web API Design: Crafting 
 
 PROJECT TEAM
 ------------
-Jason Chalom (@TRex22 on GitHub)
-Isaac Seshoka (@ick-seshoka on GitHub)
+	Jason Chalom (@TRex22)
+	Isaac Seshoka (@ick-seshoka)
 
 Deliverables
 ============
 Database
 --------
 UsersTbl
-+++++++++
-	UserId (Primary Key) Autonumber
-	Username (String)
-	PasswordHash (String)
-	Email (String)
+--------
+	-UserId (Primary Key) Autonumber
+	-Username (String)
+	-PasswordHash (String)
+	-Email (String)
 
 CampusTbl
-++++++++++
-	CampusID (Primary Key) Autonumber
-	GPSLat1 (String)
-	GPSLong1 (String)
-	GPSLat2 (String)
-	GPSLong2 (String)
-	GPSLat3 (String)
-	GPSLong3 (String)
-	GPSLat4 (String)
-	GPSLong4 (String)
-	Description (String)
-	ImageLocation (String)
+---------
+	-CampusID (Primary Key) Autonumber
+	-GPSLat1 (String)
+	-GPSLong1 (String)
+	-GPSLat2 (String)
+	-GPSLong2 (String)
+	-GPSLat3 (String)
+	-GPSLong3 (String)
+	-GPSLat4 (String)
+	-GPSLong4 (String)
+	-Description (String)
+	-ImageLocation (String)
 
 BuildingsTbl
-+++++++++++++
-	BuildingID (String)
-	CampusID (Foreign Key from Campus table)
-	GPSLat (String)
-	GPSLong (String)
-	Description (String)
-	ImageLocation (String)
-	BuildingAbbreviations (String) There can be a few of them which will then be delimited.
+------------
+	-BuildingID (String)
+	-CampusID (Foreign Key from Campus table)
+	-GPSLat (String)
+	-GPSLong (String)
+	-Description (String)
+	-ImageLocation (String)
+	-BuildingAbbreviations (String) There can be a few of them which will then be delimited.
 	
 Web Pages
 ---------
@@ -127,20 +127,20 @@ API DESIGN
 
 GET CAMPUS
 ----------
-~/api/{v1}/campuses/{CampusID}
+	~/api/{v1}/campuses/{CampusID}
 This will return a JSON object of the specific campus its information and the http header.
 
 GET CAMPUS LIST
 ---------------
-~/api/{v1}/campuses/
+	~/api/{v1}/campuses/
 This will return a JSON list (IEnumerable object) of campuses in the system including the http response header.
 
 GET BUILDING
 ------------
-~/api/{v1}/buildings/{BuildingID}
+	~/api/{v1}/buildings/{BuildingID}
 This will return a JSON object of the specific building its information and the http header.
 
 GET BUILDINGS LIST
 ------------------
-~/api/{v1}/buildings/
+	~/api/{v1}/buildings/
 This will return a JSON list (IEnumerable object) of buildings in the system including the http response header.
