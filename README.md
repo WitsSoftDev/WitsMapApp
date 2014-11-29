@@ -1,4 +1,4 @@
-WitsSoftDev13
+WitsSoftDev13 [![Build Status](https://travis-ci.org/WitsSoftDev/WitsMapApp.svg)](https://travis-ci.org/WitsSoftDev/WitsMapApp)
 =============
 
 PROJECT OVERVIEW
