@@ -12,6 +12,7 @@ before_install:
  - sudo bash run-build.sh
 
 script:
+ - "cd Project_Folder/ServerSide_Src/WitsMapAppServ/"
  - xbuild
  
 branches:

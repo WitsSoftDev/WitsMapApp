@@ -25,4 +25,4 @@ else
 fi
 
 #Goes to the directory to build server src, perhaps have a seperate build script
-cd Project_Folder/ServerSide_Src/WitsMapAppAdmin/
+#cd Project_Folder/ServerSide_Src/WitsMapAppServ/
