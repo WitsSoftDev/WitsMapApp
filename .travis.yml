@@ -12,7 +12,7 @@ before_install:
  - sudo bash run-build.sh
 
 script:
- - make
+ - xbuild
  
 branches:
   only:

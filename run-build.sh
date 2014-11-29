@@ -24,3 +24,5 @@ else
 	sudo cp -R "/Volumes/Xamarin Studio/Xamarin Studio.app" /Applications	
 fi
 
+#Goes to the directory to build server src, perhaps have a seperate build script
+cd Project_Folder/ServerSide_Src/WitsMapAppAdmin/
