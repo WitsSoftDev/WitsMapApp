@@ -2,7 +2,7 @@
 
 # installs Mono Framework and Xamarin Studio dependencies
 
-MONO_VERSION="3.4.0"
+MONO_VERSION="3.2.8"
 XAMARIN_VERSION="5.0.0.878-0"
 
 MONO_PATH=$(which mono || true)
@@ -26,3 +26,6 @@ fi
 
 #Goes to the directory to build server src, perhaps have a seperate build script
 #cd Project_Folder/ServerSide_Src/WitsMapAppServ/
+
+sudo mkdir /Library/Frameworks/Mono.framework/Versions/3.2.8/etc/mono/registry
+sudo chmod g+rwx /Library/Frameworks/Mono.framework/Versions/3.2.8/etc/mono/registry
