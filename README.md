@@ -130,3 +130,8 @@ GET BUILDINGS LIST
 ------------------
 	~/api/{v1}/buildings/
 This will return a JSON list (IEnumerable object) of buildings in the system including the http response header.
+
+Some Third Party
+================
+Some of the travis CI build scripts I took from these repos:
+	https://github.com/intellifactory/monodevelop.websharper
