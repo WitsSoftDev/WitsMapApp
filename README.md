@@ -1,6 +1,8 @@
 WitsSoftDev13 [![Build Status](https://travis-ci.org/WitsSoftDev/WitsMapApp.svg)](https://travis-ci.org/WitsSoftDev/WitsMapApp)
 =============
 
+This is the node server deployment branch
+
 PROJECT OVERVIEW
 ----------------
 This is the University of the Witwatersrand's Software Development Student group’s 2013 (and perhaps going into 2014) project to build a mobile application for Wits Marketing. 
