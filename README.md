@@ -1,11 +1,11 @@
 WitsSoftDev13 [![Build Status](https://travis-ci.org/WitsSoftDev/WitsMapApp.svg)](https://travis-ci.org/WitsSoftDev/WitsMapApp)
 =============
 
-This is the node server deployment branch
+This is the node server deployment branch. Makes use of the Heroku Node Example app
 
 PROJECT OVERVIEW
 ----------------
-This is the University of the Witwatersrand's Software Development Student group’s 2013 (and perhaps going into 2014) project to build a mobile application for Wits Marketing. 
+This is the University of the Witwatersrand's Software Development Student groupï¿½s 2013 (and perhaps going into 2014) project to build a mobile application for Wits Marketing.
 This app will allow the user to select on a map where they would like to go and from their current position to their destination it will calculate and display the shortest path using the Google API.
 It will also display information about the campus they are on and the building they are going to. Both a description and an image will be displayed respectively. The ability to display more images may be added later.
 
@@ -23,11 +23,11 @@ SUCCESS CRITERIA
 	2. Ability to draw paths to locations, perhaps even have dynamically updateable paths.
 	3. Have a server side administration web-app which is functional.
 	4. All user interfaces have Wits colours and logo.
-	
+
 API
 ---
 The API follows a RESTful practices.
-The RESTful API standard used follows apigee’s ebook: “Web API Design: Crafting Interfaces that Developers Love”.
+The RESTful API standard used follows apigeeï¿½s ebook: ï¿½Web API Design: Crafting Interfaces that Developers Loveï¿½.
 
 PROJECT TEAM
 ------------
@@ -68,7 +68,7 @@ BuildingsTbl
 	Description (String)
 	ImageLocation (String)
 	BuildingAbbreviations (String) There can be a few of them which will then be delimited.
-	
+
 Web Pages
 ---------
 All web pages will have a unified theme. (See the SpecificationDesigns.pdf document for all proposed wireframe designs)
@@ -86,8 +86,8 @@ User Administration
 This page is used to display all users in the system, edit user information and also delete users.
 Campus Input Page
 -----------------
-This page is where Campus information is inputted, it will use a Google Maps object to help locate a square which demarcates the campus selected. 
-The user will ‘draw’ a rectangle around the area they wish to demarcate.
+This page is where Campus information is inputted, it will use a Google Maps object to help locate a square which demarcates the campus selected.
+The user will ï¿½drawï¿½ a rectangle around the area they wish to demarcate.
 It will upload an image (Maybe multiple) of the campus and also a description of the campus.
 Campus Administration
 ---------------------
