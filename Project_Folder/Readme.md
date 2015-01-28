@@ -1,0 +1,1 @@
+This is the src folder for the app it will contain every "code" file in our app

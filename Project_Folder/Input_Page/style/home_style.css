@@ -1,0 +1,173 @@
+
+/* 
+    Created on : 08 Dec 2013, 9:32:00 AM
+    Author     : ick
+*/
+
+/*
+    This is the stylesheet for the home page
+        -also includes custom bootstrap.
+*/
+
+body {
+    min-height: 1200px;
+}
+ul.dropdown-menu {
+    min-width: 0;
+    padding: 0;
+}
+
+.btn-group > .dropdown-menu {
+    font-size: 13px;
+}
+
+.dropdown-menu > li > a:hover {
+    color: rgba(0, 0, 0,0.5);
+    background-color: rgba(0, 129, 194,0);
+    background-image: none;
+}
+
+div#page-title {
+    padding-top: 55px;
+}
+
+.padding-left-separator {
+    padding-left: 8px
+}
+
+.reduce-height {
+    height:  18px;
+}
+
+.reduce-width {
+    width: 30px;
+}
+
+a:focus {
+    outline:none;
+}
+
+.nav-style-right {
+    padding: 12px 0px 15px;
+    box-shadow: 1px 0px 0px rgb(238, 238, 238) inset;
+    background-image: linear-gradient(to right, rgb(246, 246, 246) 0%, rgb(255, 255, 255) 8px);
+}
+
+.link-shaded {
+    opacity: 0.75;
+}
+.nav-tabs > li > a {
+    border: none;
+}
+.nav > li > a:hover {
+    box-shadow: 2px 0px 0px rgb(204, 204, 204) inset;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.85;
+}
+
+.nav > li > a:focus{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+    border-left: 1px solid transparent;
+    opacity: 0.95;
+}
+
+.nav-style-left {
+    padding: 12px 0px 15px;
+    background-image: linear-gradient(to left, rgb(246, 246, 246) 0%, rgb(255, 255, 255) 8px);
+}
+
+.nav-style-left > li > a:hover {
+    box-shadow: none;
+}
+
+.tabs-left > .nav-tabs > li > a {
+    min-width: 25px;
+    padding-right: 0px;
+}
+
+div.gray-bg {
+    position: relative;
+    padding: 3px;
+    background: #efefef;
+    border-radius: 4px;
+}
+
+.rounder-border {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: white;
+}
+
+.form-title{
+    width: 100%;
+    height: 35px;
+    padding: 15px 0px 0px 0px;
+    background-color: rgb(244, 244, 244);
+    background-image: linear-gradient(rgb(250, 250, 250), rgb(234, 234, 234));
+    background-repeat: repeat-x;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px 4px 0px 0px;
+    
+}
+
+.form-title-header {
+    margin: 0px 0px 0px 0.1%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.icon-add-margin {
+    margin-top: 5px;
+}
+
+.form-style {
+    padding: 20px 0px 0px 30px;
+    margin-left: 30px;
+}
+
+.label-style {
+    margin-left: 5px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.pull-down {
+    margin-top: 15px;
+}
+
+div#submit-msg-container {
+    width: 100%;
+    height: 70px;
+    padding-top: 10px;
+    background-color: rgb(244, 244, 244);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.text-small {
+    font-size: 13px;
+}
+
+p {
+    margin: 0px;
+}
+
+.add-margin {
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+label.error {
+    display: inline;
+    position: relative;
+    margin-left: 10px;
+    top: -5px;
+    color: rgb(185, 74, 72);
+}
+
+div#location-delete-msg-content {
+    position: fixed;
+    width: 83%;
+}
+

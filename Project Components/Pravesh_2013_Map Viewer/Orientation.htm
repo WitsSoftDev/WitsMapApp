@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ -->
+<html><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+        <link rel="stylesheet" type="text/css" href="Orientation_files/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="Orientation_files/bootstrap-responsive.css">
+        <link rel="stylesheet" type="text/css" href="Orientation_files/orientation.css">
+        <link rel="stylesheet" type="text/css" href="Orientation_files/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="Orientation_files/map.css">
+        <title>Orientation</title>
+        <script type="text/javascript" src="Orientation_files/iscroll.js"></script>
+    <style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+/** reset styling **/
+.firebugResetStyles {
+    z-index: 2147483646 !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: block !important;
+    border: 0 none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    outline: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: fixed !important;
+    transform: rotate(0deg) !important;
+    transform-origin: 50% 50% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent none !important;
+    pointer-events: none !important;
+    white-space: normal !important;
+}
+
+.firebugBlockBackgroundColor {
+    background-color: transparent !important;
+}
+
+.firebugResetStyles:before, .firebugResetStyles:after {
+    content: "" !important;
+}
+/**actual styling to be modified by firebug theme**/
+.firebugCanvas {
+    display: none !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBox {
+    width: auto !important;
+    position: static !important;
+}
+
+.firebugLayoutBoxOffset {
+    opacity: 0.8 !important;
+    position: fixed !important;
+}
+
+.firebugLayoutLine {
+    opacity: 0.4 !important;
+    background-color: #000000 !important;
+}
+
+.firebugLayoutLineLeft, .firebugLayoutLineRight {
+    width: 1px !important;
+    height: 100% !important;
+}
+
+.firebugLayoutLineTop, .firebugLayoutLineBottom {
+    width: 100% !important;
+    height: 1px !important;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px !important;
+    border-top: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px !important;
+    border-left: 1px solid #999999 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBoxParent {
+    border-top: 0 none !important;
+    border-right: 1px dashed #E00 !important;
+    border-bottom: 1px dashed #E00 !important;
+    border-left: 0 none !important;
+    position: fixed !important;
+    width: auto !important;
+}
+
+.firebugRuler{
+    position: absolute !important;
+}
+
+.firebugRulerH {
+    top: -15px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 14px !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x !important;
+    border-top: 1px solid #BBBBBB !important;
+    border-right: 1px dashed #BBBBBB !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.firebugRulerV {
+    top: 0 !important;
+    left: -15px !important;
+    width: 14px !important;
+    height: 100% !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y !important;
+    border-left: 1px solid #BBBBBB !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px dashed #BBBBBB !important;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0 !important;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.fbProxyElement {
+    position: fixed !important;
+    pointer-events: auto !important;
+}
+</style></head>
+    <body>
+        <div class="wrap">
+            <div id="header" class="container">
+                <header class="red-or">
+                    <h1 style="color: #ffffff; font-size: 20px;"><div id="maptitle">Map</div></h1>
+                </header>
+            </div>
+            
+            <div class="mapwrapper container" id="mapwrapper" style="border: 2px solid rgb(0, 0, 102); overflow: hidden;">
+                <div style="transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(-841px, -567px) scale(1) translateZ(0px);" id="scroller" class="scroller">
+                    <img id="mapimg" src="Orientation_files/Braamfonteinmap.png" height="1492px" width="2186px">
+                        <div class="overlay" id="overlay">
+                         <img src="Orientation_files/person.png">
+                         </div>
+                         <div class="overlayTarget" id="overlayTarget">
+                         <img src="Orientation_files/target.png">
+                         </div>
+                        </div>
+            <div style="position: absolute; z-index: 100; height: 7px; bottom: 1px; left: 2px; right: 7px; pointer-events: none; transition-property: opacity; overflow: hidden; opacity: 1;"><div style="position: absolute; z-index: 100; background: none repeat scroll 0% 0% padding-box rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.9); height: 100%; border-radius: 3px; pointer-events: none; transition-property: transform; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(360.429px, 0px) translateZ(0px); width: 397px;"></div></div><div style="position: absolute; z-index: 100; width: 7px; bottom: 7px; top: 2px; right: 1px; pointer-events: none; transition-property: opacity; overflow: hidden; opacity: 1;"><div style="position: absolute; z-index: 100; background: none repeat scroll 0% 0% padding-box rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.9); width: 100%; border-radius: 3px; pointer-events: none; transition-property: transform; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(0px, 196px) translateZ(0px); height: 175px;"></div></div></div>
+            <div class="push"></div>
+        </div>
+        
+        <footer id="footer" class="footer pagination-centered">
+            <div class="container">
+                <p>Witsie 4 Life!</p>
+                
+                <img src="Orientation_files/home.png" onclick="doCoord()" align="left" height="30" width="30"> <img src="Orientation_files/wits-logo.png" onclick="backToMain()" height="30" width="30"> <img src="Orientation_files/search.png" onclick="makePopup()" align="right" height="30" width="30">
+            </div>
+        </footer>
+        
+        <script type="text/javascript" src="Orientation_files/jquery.js"></script>
+        <script type="text/javascript" src="Orientation_files/jquery-ui.js"></script>
+        <script type="text/javascript" src="Orientation_files/cordova-2.js"></script>
+        <script type="text/javascript" src="Orientation_files/index.js"></script>
+        <script type="text/javascript">
+            var witsgpslocation;
+            var myScroll;
+            var listScroll;
+            var mapWidth, mapHeight;
+            var currentV = 0;
+            var currentH = 0;
+            var gpstop = -26.1827578;
+            var gpsleft = 28.01695516;
+            var gpsmultx = 113941.6984;
+            var gpsmulty = -123575.9494;
+            var diag;
+            
+            function backToMain() {
+                window.location.replace("index.html");
+            }
+            
+            function setGPSTarget(vert, horiz) {
+                calcCoord(vert, horiz, 'overlayTarget');
+                //document.getElementById('overlayTarget').style.visibility = "visible";
+                diag.dialog("close");
+            }
+            
+            function changeMap(map){
+                document.getElementById('mapimg').src="img/"+map+"map.png";
+                document.getElementById('maptitle').innerHTML="Map - "+map+ " Campus";
+                if (map=="Braamfontein"){
+                    gpstop = -26.1827578;
+                    gpsleft = 28.01695516;
+                    gpsmultx = 113941.6984;
+                    gpsmulty = -123575.9494;
+                }
+                if (map=="Parktown"){
+                    gpstop = -26.178221;
+                    gpsleft = 28.034329;
+                    gpsmultx = 113941.6984;
+                    gpsmulty = -123575.9494;
+                }
+            }
+            
+            function setMapPlace(placename){
+                changeMap(witsgpslocation[placename][2]);
+                setMapTarget(witsgpslocation[placename][0], witsgpslocation[placename][1]);
+            }
+            
+            function setMapTarget(x, y) {
+                calcMapCoord(y, x, 'overlayTarget');
+                diag.dialog("close");
+            }
+            function filter(element,what) {
+                var searchString = element.value;
+                $('#'+what+' li').each(function(i, li) {
+                                       var $product = $(li);
+                                       if($product.text().toLowerCase().indexOf(searchString.toLowerCase())>=0){
+                                       $product.show();
+                                       } else {
+                                       $product.hide();
+                                       }
+                                       });
+            }
+            
+            function buildPopup() {
+                var diagString = '<div id="myDialog"><div id="listwrapper" style="height:400px"><div id="listscroller" style="position:relative;width:95%; margin-left:auto; margin-right:auto"><ul id="theList">';
+                for (k in witsgpslocation){
+                    diagString += '<li id="'+k+'" style="font-size:20px;height:50px;" onclick="setMapPlace(\''+k+'\')">'+k+'</li>';
+                }
+                diagString+='</ul></span></div></div>';
+                diag = $(diagString);
+                diag.dialog({
+                            title : "Filter : <input type='text' onkeyup=\"filter(this,'theList')\"/>",
+                            draggable : false,
+                            autoOpen : false,
+                            modal : true,
+                            width : "90%",
+                            marginLeft : 0,
+                            resizable:false,
+                            });
+                listScroll = new iScroll('myDialog', {
+                                         vScroll : true,
+                                         hScroll : true,
+                                         zoom : true
+                                         });
+            }
+            
+            function makePopup() {
+                diag.dialog("open");
+                listScroll.refresh();
+            }
+            
+            function updateCurrentLocation(vert, horiz) {
+                currentV = vert;
+                currentH = horiz;
+                doCoord();
+            }
+            
+            function doCoord() {
+                calcCoord(currentV, currentH, 'overlay');
+            }
+            
+            function calcMapCoord(vert, horiz, element) {
+                var xpix = horiz;
+                var ypix = vert;
+                if ((xpix < 0) || (ypix < 0) || (xpix>2186) || (ypix>1492)) {
+                    document.getElementById(element).style.visibility = "hidden";
+                } else {
+                    document.getElementById(element).style.visibility = "visible";
+                    document.getElementById(element).style.top = ypix + "px";
+                    document.getElementById(element).style.left = xpix + "px";
+                    var zoomLevelW = myScroll.scrollerW / $("#scroller").width();
+                    var zoomLevelH = myScroll.scrollerH / $("#scroller").height();
+                    myScroll.scrollTo(-xpix * zoomLevelW + (mapWidth / 2), -ypix
+                                      * zoomLevelH + (mapHeight / 2), 1500);
+                }
+            }
+            
+            function calcCoord(vert, horiz, element) {
+                var xpix = ((horiz - gpsleft) * gpsmultx);
+                var ypix = ((vert - gpstop) * gpsmulty);
+                calcMapCoord(ypix, xpix, element);
+            }
+            
+            function displayLocation(position) {
+                
+                //build text string including co-ordinate data passed in parameter
+                updateCurrentLocation(position.coords.latitude,
+                                      position.coords.longitude);
+                //display the string for demonstration
+            }
+            
+            function displayError(error) {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                    alert("Permission was denied");
+                    break;
+                    case error.POSITION_UNAVAILABLE:
+                    alert("Location data not available");
+                    break;
+                    case error.TIMEOUT:
+                    alert("Location request timeout");
+                    break;
+                    case error.UNKNOWN_ERROR:
+                    alert("An unspecified error occurred");
+                    break;
+                    default:
+                    alert("Who knows what happened...");
+                    break;
+                }
+            }
+            
+            function loadScroll() {
+              //  alert("Stuff");
+                document.addEventListener('touchmove', function(e){e.preventDefault(); });
+                myScroll =new iScroll('mapwrapper');
+            }
+
+            $(function() { // wait for the DOM to be ready
+              var winW = 630, winH = 460;
+              loadScroll();
+              witsgpslocation = new Array();
+              
+              witsgpslocation["Braamfontein Campus"] = new Array(1540, 1258, "Braamfontein");
+              witsgpslocation["Parktown Campus"] = new Array(1540, 1258, "Parktown");
+              witsgpslocation["Alumni House"] = new Array(988,403,"Braamfontein");
+              witsgpslocation["Art Museum"] = new Array(1836,1254,"Braamfontein");
+              witsgpslocation["Barnato Hall"] = new Array(895,523,"Braamfontein");
+              witsgpslocation["Bernard Price"] = new Array(1395,1226,"Braamfontein");
+              witsgpslocation["Biology"] = new Array(1641,1018,"Braamfontein");
+              witsgpslocation["Bohlaleng Block"] = new Array(1389,747,"Parktown");
+              witsgpslocation["Bozzoli Pavilion"] = new Array(1484,512,"Braamfontein");
+              witsgpslocation["Campus Centre"] = new Array(1365,670,"Parktown");
+              witsgpslocation["Campus Lodge"] = new Array(1736,1431,"Braamfontein");
+              witsgpslocation["CCDU"] = new Array(1147,1011,"Braamfontein");
+              witsgpslocation["Central Block"] = new Array(1524,1159,"Braamfontein");
+              witsgpslocation["Centre for Language and Hearing"] = new Array(865,593,"Parktown");
+              witsgpslocation["Chamber of Mines"] = new Array(1147,1104,"Braamfontein");
+              witsgpslocation["Charlotte Maxeke"] = new Array(1678,199,"Parktown");
+              witsgpslocation["CLTD"] = new Array(1006,1173,"Braamfontein");
+              witsgpslocation["College House"] = new Array(1537,770,"Braamfontein");
+              witsgpslocation["Commerce Library"] = new Array(961,833,"Braamfontein");
+              witsgpslocation["Commerce, Law and Management"] = new Array(1078,817,"Braamfontein");
+              witsgpslocation["Dalrymple House"] = new Array(1408,782,"Braamfontein");
+              witsgpslocation["David Webster"] = new Array(1042,520,"Braamfontein");
+              witsgpslocation["DJ Du Plessis"] = new Array(815,689,"Braamfontein");
+              witsgpslocation["Donald Gordon Medical Center"] = new Array(359,689,"Parktown");
+              witsgpslocation["Education Campus"] = new Array(1105,819,"Parktown");
+              witsgpslocation["Emthonjeni"] = new Array(1720,1027,"Braamfontein");
+              witsgpslocation["Ernest Oppenheimer Hall"] = new Array(695,926,"Parktown");
+              witsgpslocation["Facilities"] = new Array(832,766,"Braamfontein");
+              witsgpslocation["First National Bank Building"] = new Array(1068,724,"Braamfontein");
+              witsgpslocation["Flower Hall"] = new Array(1048,1115,"Braamfontein");
+              witsgpslocation["FNB Building"] = new Array(1068,724,"Braamfontein");
+              witsgpslocation["Gate House"] = new Array(1710,1150,"Braamfontein");
+              witsgpslocation["Genmin Labs"] = new Array(1032,1065,"Braamfontein");
+              witsgpslocation["Geoscience"] = new Array(1440,1051,"Braamfontein");
+              witsgpslocation["Girton Hall"] = new Array(1512,681,"Parktown");
+              witsgpslocation["Graduate Lodge"] = new Array(1577,1341,"Braamfontein");
+              witsgpslocation["Great Hall"] = new Array(1524,1159,"Braamfontein");
+              witsgpslocation["Hall 29"] = new Array(1037,458,"Braamfontein");
+              witsgpslocation["Harold Holmes Library"] = new Array(1364,586,"Parktown");
+              witsgpslocation["High Voltage Lab"] = new Array(1008,1104,"Braamfontein");
+              witsgpslocation["Highfield"] = new Array(1617,607,"Parktown");
+              witsgpslocation["Hillman"] = new Array(1435,1188,"Braamfontein");
+              witsgpslocation["Hofmeyer House"] = new Array(1729,741,"Braamfontein");
+              witsgpslocation["Hostel Drive"] = new Array(1510,714,"Braamfontein");
+              witsgpslocation["Humphrey Raikes"] = new Array(1630,1163,"Braamfontein");
+              witsgpslocation["International House"] = new Array(1631,799,"Braamfontein");
+              witsgpslocation["iThemba Labs"] = new Array(1476,437,"Braamfontein");
+              witsgpslocation["Jan Smuts House"] = new Array(1700,952,"Braamfontein");
+              witsgpslocation["John Moffat"] = new Array(1408,911,"Braamfontein");
+              witsgpslocation["Jubilee Hall"] = new Array(1755,695,"Braamfontein");
+              witsgpslocation["Khanya Block"] = new Array(1471,488,"Parktown");
+              witsgpslocation["Language School"] = new Array(1605,447,"Braamfontein");
+              witsgpslocation["Law Clinic"] = new Array(961,833,"Braamfontein");
+              witsgpslocation["Leseding Block"] = new Array(1404,826,"Parktown");
+              witsgpslocation["Linder Auditorium"] = new Array(1251,582,"Parktown");
+              witsgpslocation["Marang Centre"] = new Array(1538,858,"Parktown");
+              witsgpslocation["McGregor Block"] = new Array(1422,897,"Parktown");
+              witsgpslocation["Medhurst Hall"] = new Array(1563,738,"Parktown");
+              witsgpslocation["Medical School"] = new Array(1747,455,"Parktown");
+              witsgpslocation["Mwalimu House"] = new Array(579,945,"Parktown");
+              witsgpslocation["New Commerce"] = new Array(1104,869,"Braamfontein");
+              witsgpslocation["North Lodge"] = new Array(668,758,"Parktown");
+              witsgpslocation["North West Engineering"] = new Array(1365,1051,"Braamfontein");
+              witsgpslocation["Old Grandstand"] = new Array(1021,910,"Braamfontein");
+              witsgpslocation["Old Mutual Sports Hall"] = new Array(1399,847,"Braamfontein");
+              witsgpslocation["Oppenheimer Life Sciences"] = new Array(1712,1094,"Braamfontein");
+              witsgpslocation["Origins Centre"] = new Array(1283,1247,"Braamfontein");
+              witsgpslocation["Outeniqua House"] = new Array(600,1118,"Parktown");
+              witsgpslocation["Palaeosciences Centre"] = new Array(1388,1285,"Braamfontein");
+              witsgpslocation["Parktown Village"] = new Array(728,1043,"Parktown");
+              witsgpslocation["Physics"] = new Array(1625,1109,"Braamfontein");
+              witsgpslocation["Planetarium"] = new Array(1294,713,"Braamfontein");
+              witsgpslocation["Reith Hall"] = new Array(1615,798,"Parktown");
+              witsgpslocation["Res Admin"] = new Array(796,1099,"Parktown");
+              witsgpslocation["Richard Ward"] = new Array(1443,1271,"Braamfontein");
+              witsgpslocation["Sarua"] = new Array(596,844,"Parktown");
+              witsgpslocation["School of Arts"] = new Array(1777,1154,"Braamfontein");
+              witsgpslocation["School of P&DM"] = new Array(676,1098,"Parktown");
+              witsgpslocation["Science Stadium"] = new Array(981,1003,"Braamfontein");
+              witsgpslocation["Senate House"] = new Array(1538,1254,"Braamfontein");
+              witsgpslocation["South Court"] = new Array(1660,1334,"Braamfontein");
+              witsgpslocation["South West Engineering"] = new Array(1421,1134,"Braamfontein");
+              witsgpslocation["Squash Courts"] = new Array(1138,443,"Braamfontein");
+              witsgpslocation["Student Enrollment"] = new Array(1538,1254,"Braamfontein");
+              witsgpslocation["Sunnyside"] = new Array(1672,871,"Braamfontein");
+              witsgpslocation["The Matrix"] = new Array(1561,863,"Braamfontein");
+              witsgpslocation["The Nunnery"] = new Array(1813,1214,"Braamfontein");
+              witsgpslocation["Theatre"] = new Array(1659,1263,"Braamfontein");
+              witsgpslocation["Trematon Place"] = new Array(682,835,"Parktown");
+              witsgpslocation["Umthombo"] = new Array(1600,955,"Braamfontein");
+              witsgpslocation["University Corner"] = new Array(1778,1259,"Braamfontein");
+              witsgpslocation["Wartenweiler"] = new Array(1572,1027,"Braamfontein");
+              witsgpslocation["West Campus Village"] = new Array(817,534,"Braamfontein");
+              witsgpslocation["William Cullen"] = new Array(1407,986,"Braamfontein");
+              witsgpslocation["Wits Art Museum"] = new Array(1836,1254,"Braamfontein");
+              witsgpslocation["Wits Club"] = new Array(1000,375,"Braamfontein");
+              witsgpslocation["Wits Junction"] = new Array(1872,1078,"Parktown");
+              witsgpslocation["Wits Medical School"] = new Array(1747,455,"Parktown");
+              witsgpslocation["Wits Plus"] = new Array(1156,894,"Braamfontein");
+              witsgpslocation["Wits Theatre"] = new Array(1659,1263,"Braamfontein");
+              witsgpslocation["Wozani Block"] = new Array(1502,554,"Parktown");
+              var options = {frequency:3000, enableHighAccuracy:true};
+              watchID = navigator.geolocation.watchPosition(displayLocation,
+                                                            displayError, options);
+              
+              if (document.body && document.body.offsetWidth) {
+              winW = document.body.offsetWidth;
+              winH = document.body.offsetHeight;
+              }
+              if (document.compatMode == 'CSS1Compat' && document.documentElement
+                  && document.documentElement.offsetWidth) {
+              winW = document.documentElement.offsetWidth;
+              winH = document.documentElement.offsetHeight;
+              }
+              if (window.innerWidth && window.innerHeight) {
+              winW = window.innerWidth;
+              winH = window.innerHeight;
+              }
+              var h = winH - $("#header").height() - $("#footer").height();
+              //$("#wrapper").height(h);
+              buildPopup();
+              mapWidth = winW;
+              mapHeight = h;
+              
+              myScroll.scrollTo(-1286,-992);
+              if (document.URL.indexOf("#")>0){
+              setMapPlace(document.URL.substring(document.URL.indexOf("#")+1));
+              }
+              
+              });
+            </script>
+    
+<div aria-labelledby="ui-id-1" role="dialog" tabindex="-1" style="display: none; outline: 0px none; z-index: 1000;" class="ui-dialog ui-widget ui-widget-content ui-corner-all"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-id-1">Filter : <input onkeyup="filter(this,'theList')" type="text"></span><a role="button" class="ui-dialog-titlebar-close ui-corner-all" href="#"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="ui-dialog-content ui-widget-content" style="display: block; overflow: hidden;" id="myDialog"><div id="listwrapper" style="height: 400px; transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) translateZ(0px);"><div id="listscroller" style="position:relative;width:95%; margin-left:auto; margin-right:auto"><ul id="theList"><li id="Braamfontein Campus" style="font-size:20px;height:50px;" onclick="setMapPlace('Braamfontein Campus')">Braamfontein Campus</li><li id="Parktown Campus" style="font-size:20px;height:50px;" onclick="setMapPlace('Parktown Campus')">Parktown Campus</li><li id="Alumni House" style="font-size:20px;height:50px;" onclick="setMapPlace('Alumni House')">Alumni House</li><li id="Art Museum" style="font-size:20px;height:50px;" onclick="setMapPlace('Art Museum')">Art Museum</li><li id="Barnato Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Barnato Hall')">Barnato Hall</li><li id="Bernard Price" style="font-size:20px;height:50px;" onclick="setMapPlace('Bernard Price')">Bernard Price</li><li id="Biology" style="font-size:20px;height:50px;" onclick="setMapPlace('Biology')">Biology</li><li id="Bohlaleng Block" style="font-size:20px;height:50px;" onclick="setMapPlace('Bohlaleng Block')">Bohlaleng Block</li><li id="Bozzoli Pavilion" style="font-size:20px;height:50px;" onclick="setMapPlace('Bozzoli Pavilion')">Bozzoli Pavilion</li><li id="Campus Centre" style="font-size:20px;height:50px;" onclick="setMapPlace('Campus Centre')">Campus Centre</li><li id="Campus Lodge" style="font-size:20px;height:50px;" onclick="setMapPlace('Campus Lodge')">Campus Lodge</li><li id="CCDU" style="font-size:20px;height:50px;" onclick="setMapPlace('CCDU')">CCDU</li><li id="Central Block" style="font-size:20px;height:50px;" onclick="setMapPlace('Central Block')">Central Block</li><li id="Centre for Language and Hearing" style="font-size:20px;height:50px;" onclick="setMapPlace('Centre for Language and Hearing')">Centre for Language and Hearing</li><li id="Chamber of Mines" style="font-size:20px;height:50px;" onclick="setMapPlace('Chamber of Mines')">Chamber of Mines</li><li id="Charlotte Maxeke" style="font-size:20px;height:50px;" onclick="setMapPlace('Charlotte Maxeke')">Charlotte Maxeke</li><li id="CLTD" style="font-size:20px;height:50px;" onclick="setMapPlace('CLTD')">CLTD</li><li id="College House" style="font-size:20px;height:50px;" onclick="setMapPlace('College House')">College House</li><li id="Commerce Library" style="font-size:20px;height:50px;" onclick="setMapPlace('Commerce Library')">Commerce Library</li><li id="Commerce, Law and Management" style="font-size:20px;height:50px;" onclick="setMapPlace('Commerce, Law and Management')">Commerce, Law and Management</li><li id="Dalrymple House" style="font-size:20px;height:50px;" onclick="setMapPlace('Dalrymple House')">Dalrymple House</li><li id="David Webster" style="font-size:20px;height:50px;" onclick="setMapPlace('David Webster')">David Webster</li><li id="DJ Du Plessis" style="font-size:20px;height:50px;" onclick="setMapPlace('DJ Du Plessis')">DJ Du Plessis</li><li id="Donald Gordon Medical Center" style="font-size:20px;height:50px;" onclick="setMapPlace('Donald Gordon Medical Center')">Donald Gordon Medical Center</li><li id="Education Campus" style="font-size:20px;height:50px;" onclick="setMapPlace('Education Campus')">Education Campus</li><li id="Emthonjeni" style="font-size:20px;height:50px;" onclick="setMapPlace('Emthonjeni')">Emthonjeni</li><li id="Ernest Oppenheimer Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Ernest Oppenheimer Hall')">Ernest Oppenheimer Hall</li><li id="Facilities" style="font-size:20px;height:50px;" onclick="setMapPlace('Facilities')">Facilities</li><li id="First National Bank Building" style="font-size:20px;height:50px;" onclick="setMapPlace('First National Bank Building')">First National Bank Building</li><li id="Flower Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Flower Hall')">Flower Hall</li><li id="FNB Building" style="font-size:20px;height:50px;" onclick="setMapPlace('FNB Building')">FNB Building</li><li id="Gate House" style="font-size:20px;height:50px;" onclick="setMapPlace('Gate House')">Gate House</li><li id="Genmin Labs" style="font-size:20px;height:50px;" onclick="setMapPlace('Genmin Labs')">Genmin Labs</li><li id="Geoscience" style="font-size:20px;height:50px;" onclick="setMapPlace('Geoscience')">Geoscience</li><li id="Girton Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Girton Hall')">Girton Hall</li><li id="Graduate Lodge" style="font-size:20px;height:50px;" onclick="setMapPlace('Graduate Lodge')">Graduate Lodge</li><li id="Great Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Great Hall')">Great Hall</li><li id="Hall 29" style="font-size:20px;height:50px;" onclick="setMapPlace('Hall 29')">Hall 29</li><li id="Harold Holmes Library" style="font-size:20px;height:50px;" onclick="setMapPlace('Harold Holmes Library')">Harold Holmes Library</li><li id="High Voltage Lab" style="font-size:20px;height:50px;" onclick="setMapPlace('High Voltage Lab')">High Voltage Lab</li><li id="Highfield" style="font-size:20px;height:50px;" onclick="setMapPlace('Highfield')">Highfield</li><li id="Hillman" style="font-size:20px;height:50px;" onclick="setMapPlace('Hillman')">Hillman</li><li id="Hofmeyer House" style="font-size:20px;height:50px;" onclick="setMapPlace('Hofmeyer House')">Hofmeyer House</li><li id="Hostel Drive" style="font-size:20px;height:50px;" onclick="setMapPlace('Hostel Drive')">Hostel Drive</li><li id="Humphrey Raikes" style="font-size:20px;height:50px;" onclick="setMapPlace('Humphrey Raikes')">Humphrey Raikes</li><li id="International House" style="font-size:20px;height:50px;" onclick="setMapPlace('International House')">International House</li><li id="iThemba Labs" style="font-size:20px;height:50px;" onclick="setMapPlace('iThemba Labs')">iThemba Labs</li><li id="Jan Smuts House" style="font-size:20px;height:50px;" onclick="setMapPlace('Jan Smuts House')">Jan Smuts House</li><li id="John Moffat" style="font-size:20px;height:50px;" onclick="setMapPlace('John Moffat')">John Moffat</li><li id="Jubilee Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Jubilee Hall')">Jubilee Hall</li><li id="Khanya Block" style="font-size:20px;height:50px;" onclick="setMapPlace('Khanya Block')">Khanya Block</li><li id="Language School" style="font-size:20px;height:50px;" onclick="setMapPlace('Language School')">Language School</li><li id="Law Clinic" style="font-size:20px;height:50px;" onclick="setMapPlace('Law Clinic')">Law Clinic</li><li id="Leseding Block" style="font-size:20px;height:50px;" onclick="setMapPlace('Leseding Block')">Leseding Block</li><li id="Linder Auditorium" style="font-size:20px;height:50px;" onclick="setMapPlace('Linder Auditorium')">Linder Auditorium</li><li id="Marang Centre" style="font-size:20px;height:50px;" onclick="setMapPlace('Marang Centre')">Marang Centre</li><li id="McGregor Block" style="font-size:20px;height:50px;" onclick="setMapPlace('McGregor Block')">McGregor Block</li><li id="Medhurst Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Medhurst Hall')">Medhurst Hall</li><li id="Medical School" style="font-size:20px;height:50px;" onclick="setMapPlace('Medical School')">Medical School</li><li id="Mwalimu House" style="font-size:20px;height:50px;" onclick="setMapPlace('Mwalimu House')">Mwalimu House</li><li id="New Commerce" style="font-size:20px;height:50px;" onclick="setMapPlace('New Commerce')">New Commerce</li><li id="North Lodge" style="font-size:20px;height:50px;" onclick="setMapPlace('North Lodge')">North Lodge</li><li id="North West Engineering" style="font-size:20px;height:50px;" onclick="setMapPlace('North West Engineering')">North West Engineering</li><li id="Old Grandstand" style="font-size:20px;height:50px;" onclick="setMapPlace('Old Grandstand')">Old Grandstand</li><li id="Old Mutual Sports Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Old Mutual Sports Hall')">Old Mutual Sports Hall</li><li id="Oppenheimer Life Sciences" style="font-size:20px;height:50px;" onclick="setMapPlace('Oppenheimer Life Sciences')">Oppenheimer Life Sciences</li><li id="Origins Centre" style="font-size:20px;height:50px;" onclick="setMapPlace('Origins Centre')">Origins Centre</li><li id="Outeniqua House" style="font-size:20px;height:50px;" onclick="setMapPlace('Outeniqua House')">Outeniqua House</li><li id="Palaeosciences Centre" style="font-size:20px;height:50px;" onclick="setMapPlace('Palaeosciences Centre')">Palaeosciences Centre</li><li id="Parktown Village" style="font-size:20px;height:50px;" onclick="setMapPlace('Parktown Village')">Parktown Village</li><li id="Physics" style="font-size:20px;height:50px;" onclick="setMapPlace('Physics')">Physics</li><li id="Planetarium" style="font-size:20px;height:50px;" onclick="setMapPlace('Planetarium')">Planetarium</li><li id="Reith Hall" style="font-size:20px;height:50px;" onclick="setMapPlace('Reith Hall')">Reith Hall</li><li id="Res Admin" style="font-size:20px;height:50px;" onclick="setMapPlace('Res Admin')">Res Admin</li><li id="Richard Ward" style="font-size:20px;height:50px;" onclick="setMapPlace('Richard Ward')">Richard Ward</li><li id="Sarua" style="font-size:20px;height:50px;" onclick="setMapPlace('Sarua')">Sarua</li><li id="School of Arts" style="font-size:20px;height:50px;" onclick="setMapPlace('School of Arts')">School of Arts</li><li id="School of P&amp;DM" style="font-size:20px;height:50px;" onclick="setMapPlace('School of P&amp;DM')">School of P&amp;DM</li><li id="Science Stadium" style="font-size:20px;height:50px;" onclick="setMapPlace('Science Stadium')">Science Stadium</li><li id="Senate House" style="font-size:20px;height:50px;" onclick="setMapPlace('Senate House')">Senate House</li><li id="South Court" style="font-size:20px;height:50px;" onclick="setMapPlace('South Court')">South Court</li><li id="South West Engineering" style="font-size:20px;height:50px;" onclick="setMapPlace('South West Engineering')">South West Engineering</li><li id="Squash Courts" style="font-size:20px;height:50px;" onclick="setMapPlace('Squash Courts')">Squash Courts</li><li id="Student Enrollment" style="font-size:20px;height:50px;" onclick="setMapPlace('Student Enrollment')">Student Enrollment</li><li id="Sunnyside" style="font-size:20px;height:50px;" onclick="setMapPlace('Sunnyside')">Sunnyside</li><li id="The Matrix" style="font-size:20px;height:50px;" onclick="setMapPlace('The Matrix')">The Matrix</li><li id="The Nunnery" style="font-size:20px;height:50px;" onclick="setMapPlace('The Nunnery')">The Nunnery</li><li id="Theatre" style="font-size:20px;height:50px;" onclick="setMapPlace('Theatre')">Theatre</li><li id="Trematon Place" style="font-size:20px;height:50px;" onclick="setMapPlace('Trematon Place')">Trematon Place</li><li id="Umthombo" style="font-size:20px;height:50px;" onclick="setMapPlace('Umthombo')">Umthombo</li><li id="University Corner" style="font-size:20px;height:50px;" onclick="setMapPlace('University Corner')">University Corner</li><li id="Wartenweiler" style="font-size:20px;height:50px;" onclick="setMapPlace('Wartenweiler')">Wartenweiler</li><li id="West Campus Village" style="font-size:20px;height:50px;" onclick="setMapPlace('West Campus Village')">West Campus Village</li><li id="William Cullen" style="font-size:20px;height:50px;" onclick="setMapPlace('William Cullen')">William Cullen</li><li id="Wits Art Museum" style="font-size:20px;height:50px;" onclick="setMapPlace('Wits Art Museum')">Wits Art Museum</li><li id="Wits Club" style="font-size:20px;height:50px;" onclick="setMapPlace('Wits Club')">Wits Club</li><li id="Wits Junction" style="font-size:20px;height:50px;" onclick="setMapPlace('Wits Junction')">Wits Junction</li><li id="Wits Medical School" style="font-size:20px;height:50px;" onclick="setMapPlace('Wits Medical School')">Wits Medical School</li><li id="Wits Plus" style="font-size:20px;height:50px;" onclick="setMapPlace('Wits Plus')">Wits Plus</li><li id="Wits Theatre" style="font-size:20px;height:50px;" onclick="setMapPlace('Wits Theatre')">Wits Theatre</li><li id="Wozani Block" style="font-size:20px;height:50px;" onclick="setMapPlace('Wozani Block')">Wozani Block</li></ul></div></div></div></div></body></html>
