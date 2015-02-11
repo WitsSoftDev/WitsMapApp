@@ -1,9 +1,10 @@
+[![Stories in Ready](https://badge.waffle.io/witssoftdev/witsmapapp.png?label=ready&title=Ready)](https://waffle.io/witssoftdev/witsmapapp)
 WitsSoftDev13 [![Build Status](https://travis-ci.org/WitsSoftDev/WitsMapApp.svg)](https://travis-ci.org/WitsSoftDev/WitsMapApp)
 =============
 
 PROJECT OVERVIEW
 ----------------
-This is the University of the Witwatersrand's Software Development Student groupís 2013 (and perhaps going into 2014) project to build a mobile application for Wits Marketing. 
+This is the University of the Witwatersrand's Software Development Student group‚Äôs 2013 (and perhaps going into 2014) project to build a mobile application for Wits Marketing. 
 This app will allow the user to select on a map where they would like to go and from their current position to their destination it will calculate and display the shortest path using the Google API.
 It will also display information about the campus they are on and the building they are going to. Both a description and an image will be displayed respectively. The ability to display more images may be added later.
 
@@ -25,7 +26,7 @@ SUCCESS CRITERIA
 API
 ---
 The API follows a RESTful practices.
-The RESTful API standard used follows apigeeís ebook: ìWeb API Design: Crafting Interfaces that Developers Loveî.
+The RESTful API standard used follows apigee‚Äôs ebook: ‚ÄúWeb API Design: Crafting Interfaces that Developers Love‚Äù.
 
 PROJECT TEAM
 ------------
@@ -85,7 +86,7 @@ This page is used to display all users in the system, edit user information and 
 Campus Input Page
 -----------------
 This page is where Campus information is inputted, it will use a Google Maps object to help locate a square which demarcates the campus selected. 
-The user will ëdrawí a rectangle around the area they wish to demarcate.
+The user will ‚Äòdraw‚Äô a rectangle around the area they wish to demarcate.
 It will upload an image (Maybe multiple) of the campus and also a description of the campus.
 Campus Administration
 ---------------------
