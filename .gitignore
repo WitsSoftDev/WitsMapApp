@@ -219,3 +219,5 @@ private/
 private.xml
 project.properties
 project.xml
+
+npm-debug.log

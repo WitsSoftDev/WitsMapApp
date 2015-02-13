@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="01d2d48b-e2f1-48fe-9c0c-17bd3362a91c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/WitsMapApp.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/WitsMapApp_node_modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\animated-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-icons_454545_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-icons_888888_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.all.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.autocomplete.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.base.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.button.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.core.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.menu.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.resizable.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.selectable.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.slider.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.spinner.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.theme.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\jquery.ui.tooltip.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\animated-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-icons_454545_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-icons_888888_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery-ui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.accordion.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.autocomplete.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.button.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.core.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.datepicker.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.dialog.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.menu.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.progressbar.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.resizable.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.selectable.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.slider.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.spinner.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.tabs.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\Content\themes\base\minified\jquery.ui.tooltip.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\app.json" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\index.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\COPYING" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\README" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\calendar.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\charts_amcharts.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\charts_chartist.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\charts_coindesk.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\charts_flot.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\charts_google.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\charts_morris.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\charts_xcharts.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\forms_elements.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\forms_file_uploader.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\forms_layouts.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\gallery_flickr.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\gallery_simple.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\map_fullscreen.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\map_leaflet.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\maps.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_404.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_500.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_500_v1.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_contacts.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_feed.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_invoice.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_login.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_login_v1.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_messages.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_pricing.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_product.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_register.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_register_v1.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\page_search.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\tables_beauty.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\tables_datatables.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\tables_simple.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\typography.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\ui_buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\ui_grid.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\ui_icons.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\ui_jquery-ui.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\ajax\ui_progressbars.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\css\style_v1.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\css\style_v2.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\devoops2.zip" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\8962691008_7f489395c9_m.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\8985207189_01ea27882d_m.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\9036958611_fa1bb7f827_m.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\9041440555_2175b32078_m.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\avatar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\chevron-left.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\chevron-right.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\devoops_getdata.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\devoops_pattern_b10.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\logo-200.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\sort-asc.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\sort-desc.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\sort.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\times.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\ui-accordion-down.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\ui-accordion-right.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\ui-left.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\img\ui-right.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\index.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\js\devoops.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\license_MIT.txt" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\node.svg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\amcharts.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\exporting\amexport.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\exporting\canvg.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\exporting\filesaver.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\exporting\jspdf.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\exporting\jspdf.plugin.addimage.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\exporting\rgbcolor.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\funnel.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\gauge.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\0.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\1.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\2.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\3.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\bgSky.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\bicycle.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\board.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\car.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\dragIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\dragIconBlack.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\dragIconH.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\dragIconHBlack.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\export.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\exportWhite.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\lens.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\lensWhite.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\motorcycle.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\redstar.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\images\star.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\az.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\bg.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\de.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\es.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\fi.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\fo.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\fr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\hr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\hu.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\id.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\is.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\it.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\lt.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\lv.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\mk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\mn.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\mt.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\nl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\no.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\pl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\pt.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\ro.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\ru.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\rw.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\sk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\so.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\th.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\lang\tr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern1.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern10.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern11.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern12.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern13.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern14.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern15.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern16.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern17.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern18.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern19.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern2.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern20.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern21.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern3.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern4.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern5.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern6.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern7.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern8.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\black\pattern9.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\chalk\pattern1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\chalk\pattern1r.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\chalk\pattern2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\chalk\pattern3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\chalk\pattern4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\chalk\pattern5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\chalk\pattern6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern1.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern10.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern11.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern12.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern13.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern14.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern15.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern16.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern17.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern18.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern19.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern2.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern20.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern21.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern3.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern4.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern5.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern6.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern7.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern8.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\patterns\white\pattern9.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\pie.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\radar.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\serial.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\themes\black.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\themes\chalk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\themes\dark.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\themes\light.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\themes\patterns.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\amcharts\xy.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrap\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrap\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrap\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrap\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrap\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrap\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrap\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrap\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\README.md" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\bootstrapValidator.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\bootstrapValidator.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\bootstrapValidator.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\bootstrapValidator.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\ar_MA.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\be_FR.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\be_NL.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\bg_BG.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\cs_CZ.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\da_DK.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\de_DE.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\en_US.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\es_CL.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\es_ES.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\fa_IR.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\fr_FR.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\gr_EL.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\hu_HU.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\it_IT.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\ja_JP.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\nl_NL.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\no_NO.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\pl_PL.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\ro_RO.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\ru_RU.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\sr_RS.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\sv_SE.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\th_TH.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\tr_TR.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\ua_UA.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\vi_VN.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\bootstrapvalidator\language\zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\chartist\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\chartist\chartist.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\chartist\chartist.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\chartist\chartist.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\chartist\chartist.min.map" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\d3\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\d3\d3.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\d3\d3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\datatables\TableTools.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\datatables\TableTools_orig.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\datatables\ZeroClipboard.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\datatables\copy_csv_xls_pdf.swf" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\datatables\dataTables.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\datatables\jquery.dataTables.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\datatables\jquery.dataTables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\README.md" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\fancybox_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\fancybox_loading@2x.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\fancybox_overlay.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\fancybox_sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\fancybox_sprite@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\helpers\fancybox_buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\helpers\jquery.fancybox-buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\helpers\jquery.fancybox-buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\helpers\jquery.fancybox-media.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\helpers\jquery.fancybox-thumbs.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\helpers\jquery.fancybox-thumbs.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\jquery.fancybox.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\jquery.fancybox.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fancybox\jquery.fancybox.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\edit.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\fineuploader-5.0.5.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\fineuploader-5.0.5.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\fineuploader-5.0.5.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\fineuploader-5.0.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\iframe.xss.response-5.0.5.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\jquery.fineuploader-5.0.5.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\jquery.fineuploader-5.0.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fineuploader\processing.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\flot\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\flot\jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\flot\jquery.flot.resize.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\flot\jquery.flot.time.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\fullcalendar.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\fullcalendar.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\fullcalendar.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\fullcalendar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\fullcalendar.print.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\gcal.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang-all.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\ar-ma.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\ar-sa.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\ar.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\bg.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\ca.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\cs.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\da.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\de-at.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\de.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\el.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\en-au.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\en-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\es.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\fa.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\fi.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\fr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\hi.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\hr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\hu.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\id.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\is.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\it.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\ja.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\ko.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\lt.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\lv.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\nl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\pl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\pt.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\ro.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\ru.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\sk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\sl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\sr-cyrl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\sr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\sv.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\th.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\tr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\uk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\vi.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\lang\zh-tw.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\fullcalendar\license.txt" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jQuery-Knob\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jQuery-Knob\jquery.knob.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jQuery-Knob\jquery.knob.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\LICENSE-MIT" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-addon-i18n.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-addon-i18n.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-af.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-am.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-bg.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-cs.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-da.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-de.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-el.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-es.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-et.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-eu.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-fi.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-fr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-gl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-he.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-hr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-hu.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-id.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-it.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ja.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ko.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-lt.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-no.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pt-BR.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pt.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ro.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sr-RS.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sr-YU.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sv.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-th.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-tr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-uk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-vi.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\index.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\jquery-ui-sliderAccess.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery-ui-i18n.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-af.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ar-DZ.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-az.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-be.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-bg.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-bs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ca.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-cs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-cy-GB.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-da.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-de.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-el.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-AU.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-GB.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-NZ.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-eo.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-es.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-et.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-eu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-fa.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-fi.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-fo.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CA.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CH.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-gl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-he.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-hi.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-hr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-hu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-hy.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-id.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-is.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-it.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ja.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ka.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-kk.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-km.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ko.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ky.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-lb.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-lt.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-lv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-mk.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ml.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ms.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-nb.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-nl-BE.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-nl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-nn.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-no.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-pl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-pt-BR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-pt.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-rm.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ro.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ru.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-sk.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-sl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-sq.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-sr-SR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-sr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-sv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-ta.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-th.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-tj.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-tr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-uk.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-vi.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-CN.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-HK.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-TW.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_glass_100_f6f6f6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_glass_100_fdf5ce_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-icons_228ef1_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-icons_ef8c08_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-icons_ffd27a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\jquery-ui.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\jquery-ui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery-ui\jquery-ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\jquery\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\justified-gallery\README.md" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\justified-gallery\jquery.justifiedGallery.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\justified-gallery\jquery.justifiedGallery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\justified-gallery\justifiedGallery.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\justified-gallery\justifiedGallery.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\leaflet\images\layers-2x.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\leaflet\images\layers.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\leaflet\images\marker-icon-2x.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\leaflet\images\marker-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\leaflet\images\marker-shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\leaflet\leaflet-src.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\leaflet\leaflet.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\leaflet\leaflet.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\moment\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\moment\moment-with-locales.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\moment\moment.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\morris\morris.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\morris\morris.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\raphael\raphael-min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\raphael\raphael.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\README.md" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\component.json" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\package.json" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\release.sh" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2-bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2-spinner.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ar.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_az.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_bg.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ca.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_cs.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_da.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_de.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_el.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_en.js.template" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_es.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_et.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_eu.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_fa.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_fi.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_fr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_gl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_he.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_hr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_hu.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_id.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_is.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_it.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ja.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ka.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ko.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_lt.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_lv.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_mk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ms.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_nl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_no.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_pl.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_pt-BR.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_pt-PT.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ro.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_rs.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ru.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_sk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_sv.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_th.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_tr.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ua.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_ug-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_uk.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_vi.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2_locale_zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\select2\select2x2.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\sparkline\jquery.sparkline.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\sparkline\jquery.sparkline.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\springy\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\springy\springy.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\springy\springyui.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\jquery.tinymce.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\langs\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\license.txt" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\advlist\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\anchor\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\autolink\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\autoresize\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\autosave\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\bbcode\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\charmap\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\code\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\colorpicker\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\contextmenu\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\directionality\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-cool.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-cry.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-embarassed.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-frown.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-innocent.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-kiss.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-laughing.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-sealed.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-smile.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-surprised.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-undecided.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-wink.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\img\smiley-yell.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\emoticons\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\example\dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\example\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\example_dependency\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\fullpage\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\fullscreen\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\hr\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\image\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\importcss\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\insertdatetime\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\layer\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\legacyoutput\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\link\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\lists\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\media\moxieplayer.swf" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\media\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\nonbreaking\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\noneditable\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\pagebreak\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\paste\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\preview\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\print\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\save\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\searchreplace\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\spellchecker\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\tabfocus\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\table\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\template\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\textcolor\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\textpattern\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\visualblocks\css\visualblocks.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\visualblocks\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\visualchars\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\plugins\wordcount\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\content.inline.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\content.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce-small.dev.svg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce-small.eot" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce-small.svg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce-small.ttf" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce-small.woff" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce.dev.svg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce.eot" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce.svg" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce.ttf" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\fonts\tinymce.woff" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\img\anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\img\loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\img\object.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\img\trans.gif" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\skin.ie7.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\skins\lightgray\skin.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\themes\modern\theme.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\tinymce\tinymce.min.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\xcharts\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\xcharts\README.md" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\xcharts\xcharts.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\xcharts\xcharts.js" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\xcharts\xcharts.min.css" afterPath="" />
+      <change type="DELETED" beforePath="H:\Work\code\WitsMapApp\public\plugins\xcharts\xcharts.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+    </list>
+    <ignored path="WitsMapApp.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="WitsMapApp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+              <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.611236" vertical-offset="0" max-vertical-offset="527">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3388" max-vertical-offset="3876">
+              <caret line="222" column="13" selection-start-line="222" selection-start-column="13" selection-end-line="222" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2465">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WitsMapApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WitsMapApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WitsMapApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01d2d48b-e2f1-48fe-9c0c-17bd3362a91c" name="Default" comment="" />
+      <created>1423835764640</created>
+      <option name="number" value="Default" />
+      <updated>1423835764640</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293011" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24968314" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="471">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3388" max-vertical-offset="3876">
+          <caret line="222" column="13" selection-start-line="222" selection-start-column="13" selection-end-line="222" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="471">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.611236" vertical-offset="0" max-vertical-offset="527">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
