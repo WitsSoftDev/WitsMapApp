@@ -1,6 +1,7 @@
-[![Stories in Ready](https://badge.waffle.io/witssoftdev/witsmapapp.png?label=ready&title=Ready)](https://waffle.io/witssoftdev/witsmapapp)
-WitsSoftDev13 [![Build Status](https://travis-ci.org/WitsSoftDev/WitsMapApp.svg)](https://travis-ci.org/WitsSoftDev/WitsMapApp)
+WitsSoftDev13 [![Build Status](https://travis-ci.org/WitsSoftDev/WitsMapApp.svg)](https://travis-ci.org/WitsSoftDev/WitsMapApp) [![Stories in Ready](https://badge.waffle.io/witssoftdev/witsmapapp.png?label=ready&title=Ready)](https://waffle.io/witssoftdev/witsmapapp)
 =============
+As of 2015 this project is now defunct. There were many problems, much was learned but this idea and project have now become obsolete.
+===========
 
 PROJECT OVERVIEW
 ----------------
